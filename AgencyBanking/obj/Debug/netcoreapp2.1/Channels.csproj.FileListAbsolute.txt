@@ -1,0 +1,14 @@
+C:\Users\Donald\Documents\Access\CongoMiddleware\Channels\Channels\bin\Debug\netcoreapp2.1\Channels.deps.json
+C:\Users\Donald\Documents\Access\CongoMiddleware\Channels\Channels\bin\Debug\netcoreapp2.1\Channels.runtimeconfig.json
+C:\Users\Donald\Documents\Access\CongoMiddleware\Channels\Channels\bin\Debug\netcoreapp2.1\Channels.runtimeconfig.dev.json
+C:\Users\Donald\Documents\Access\CongoMiddleware\Channels\Channels\bin\Debug\netcoreapp2.1\Channels.dll
+C:\Users\Donald\Documents\Access\CongoMiddleware\Channels\Channels\bin\Debug\netcoreapp2.1\Channels.pdb
+C:\Users\Donald\Documents\Access\CongoMiddleware\Channels\Channels\obj\Debug\netcoreapp2.1\Channels.csprojAssemblyReference.cache
+C:\Users\Donald\Documents\Access\CongoMiddleware\Channels\Channels\obj\Debug\netcoreapp2.1\Channels.csproj.CoreCompileInputs.cache
+C:\Users\Donald\Documents\Access\CongoMiddleware\Channels\Channels\obj\Debug\netcoreapp2.1\Channels.RazorAssemblyInfo.cache
+C:\Users\Donald\Documents\Access\CongoMiddleware\Channels\Channels\obj\Debug\netcoreapp2.1\Channels.RazorAssemblyInfo.cs
+C:\Users\Donald\Documents\Access\CongoMiddleware\Channels\Channels\obj\Debug\netcoreapp2.1\Channels.AssemblyInfoInputs.cache
+C:\Users\Donald\Documents\Access\CongoMiddleware\Channels\Channels\obj\Debug\netcoreapp2.1\Channels.AssemblyInfo.cs
+C:\Users\Donald\Documents\Access\CongoMiddleware\Channels\Channels\obj\Debug\netcoreapp2.1\Channels.RazorTargetAssemblyInfo.cache
+C:\Users\Donald\Documents\Access\CongoMiddleware\Channels\Channels\obj\Debug\netcoreapp2.1\Channels.dll
+C:\Users\Donald\Documents\Access\CongoMiddleware\Channels\Channels\obj\Debug\netcoreapp2.1\Channels.pdb
