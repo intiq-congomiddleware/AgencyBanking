@@ -24,6 +24,22 @@ namespace CashWithdrawal.Validators
                     .NotNull()
                     .NotEmpty()
                     .MaximumLength(100);
+            RuleFor(req => req.branch_code)
+                  .NotNull()
+                  .NotEmpty()
+                  .MaximumLength(100);
+            RuleFor(req => req.user_name)
+                  .NotNull()
+                  .NotEmpty()
+                  .MaximumLength(100);
+            RuleFor(req => req.requestId)
+                  .NotNull()
+                  .NotEmpty()
+                  .MaximumLength(100);
+            RuleFor(req => req.creditAccount)
+                   .NotNull()
+                   .NotEmpty()
+                   .MaximumLength(20);
         }
     }
 }

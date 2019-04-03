@@ -23,6 +23,7 @@ namespace AgencyBanking.Entities
         public string peURL { get; set; }
         public string GLAccount { get; set; }
         public string GLChrgAccount { get; set; }
+        public string product { get; set; }
     }
 }
 

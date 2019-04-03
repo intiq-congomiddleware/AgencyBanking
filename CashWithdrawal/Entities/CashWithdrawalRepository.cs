@@ -85,7 +85,12 @@ namespace CashWithdrawal.Entities
             {
                 dract = r.debitAccount,
                 trnamt = r.amount,
-                txnnarra = r.narration
+                txnnarra = r.narration,
+                branch_code = r.branch_code,
+                cract = r.creditAccount,
+                instr_code = "0",
+                product = _settings.product,
+                user_name = r.user_name
             };
         }
     }

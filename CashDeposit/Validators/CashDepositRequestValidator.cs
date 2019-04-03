@@ -25,6 +25,22 @@ namespace CashDeposit.Validators
                     .NotNull()
                     .NotEmpty()
                     .MaximumLength(100);
+            RuleFor(req => req.branch_code)
+                  .NotNull()
+                  .NotEmpty()
+                  .MaximumLength(100);
+            RuleFor(req => req.user_name)
+                  .NotNull()
+                  .NotEmpty()
+                  .MaximumLength(100);
+            RuleFor(req => req.requestId)
+                  .NotNull()
+                  .NotEmpty()
+                  .MaximumLength(100);
+            RuleFor(req => req.debitAccount)
+                   .NotNull()
+                   .NotEmpty()
+                   .MaximumLength(20);
         }
     }
 }

@@ -30,8 +30,6 @@ namespace CashDeposit.Entities
             string reqString; string respMsg = string.Empty; string resultContent = string.Empty;
             int respCode = 0;
 
-            request.dract = _settings.GLAccount;
-
             try
             {
                 using (var client = new HttpClient())
@@ -49,7 +47,7 @@ namespace CashDeposit.Entities
                 respCode = (int)HttpStatusCode.RequestTimeout;
                 res = new FundsTransferResponse()
                 {
-                    message =Constant.TIMEOUT_MSG,
+                    message = Constant.TIMEOUT_MSG,
                     status = Constant.TIMEOUT_STATUS
                 };
 
@@ -86,7 +84,12 @@ namespace CashDeposit.Entities
             {
                 cract = r.creditAccount,
                 trnamt = r.amount,
-                txnnarra = r.narration
+                txnnarra = r.narration,
+                branch_code = r.branch_code,
+                dract = r.debitAccount,
+                instr_code = "0",
+                user_name = r.user_name,
+                product = _settings.product
             };
         }
     }
