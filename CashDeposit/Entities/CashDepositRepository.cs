@@ -85,10 +85,10 @@ namespace CashDeposit.Entities
                 cract = r.creditAccount,
                 trnamt = r.amount,
                 txnnarra = r.narration,
-                branch_code = r.branch_code,
+                branch_code = r.branchCode,
                 dract = r.debitAccount,
                 instr_code = "0",
-                user_name = r.user_name,
+                user_name = r.userName,
                 product = _settings.product
             };
         }

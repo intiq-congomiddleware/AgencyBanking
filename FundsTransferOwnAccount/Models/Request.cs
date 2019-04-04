@@ -12,7 +12,7 @@ namespace FundsTransfer.Models
         public decimal amount { get; set; }      
         public string narration { get; set; }
         public string requestId { get; set; }
-        public string user_name { get; set; }
-        public string branch_code { get; set; }
+        public string userName { get; set; }
+        public string branchCode { get; set; }
     }
 }

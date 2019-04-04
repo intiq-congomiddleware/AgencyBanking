@@ -30,7 +30,7 @@ namespace CashWithdrawal.Entities
             string reqString; string respMsg = string.Empty; string resultContent = string.Empty;
             int respCode = 0;
 
-            request.cract1 = _settings.GLAccount;
+            //request.cract1 = _settings.GLAccount;
             request.cract2 = _settings.GLChrgAccount;
             request.trnamt1 = getCharges(request);
             request.trnamt = getPrincipal(request.trnamt, request.trnamt1);
@@ -113,10 +113,10 @@ namespace CashWithdrawal.Entities
                 trnamt = r.amount,
                 txnnarra = r.narration,
                 prate = r.chargeRate,
-                branch_code = r.branch_code,
+                branch_code = r.branchCode,
                 instr_code = "0",
                 product = _settings.product,
-                user_name = r.user_name,
+                user_name = r.userName,
                 cract1 = r.creditAccount
             };
         }

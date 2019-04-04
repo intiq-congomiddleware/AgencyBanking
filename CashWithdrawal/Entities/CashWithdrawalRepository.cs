@@ -30,7 +30,7 @@ namespace CashWithdrawal.Entities
             string reqString; string respMsg = string.Empty; string resultContent = string.Empty;
             int respCode = 0;
 
-            request.cract = _settings.GLAccount;
+            //request.cract = _settings.GLAccount;
 
             try
             {
@@ -86,11 +86,11 @@ namespace CashWithdrawal.Entities
                 dract = r.debitAccount,
                 trnamt = r.amount,
                 txnnarra = r.narration,
-                branch_code = r.branch_code,
+                branch_code = r.branchCode,
                 cract = r.creditAccount,
                 instr_code = "0",
                 product = _settings.product,
-                user_name = r.user_name
+                user_name = r.userName
             };
         }
     }

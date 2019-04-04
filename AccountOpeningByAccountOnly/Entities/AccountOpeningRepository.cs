@@ -101,8 +101,8 @@ namespace AccountOpening.Entities
                 NATIONALITY = r.nationality,
                 SEX = r.sex,
                 SHORT_NAME = r.shortName,
-                TELEPHONE = r.telephone
-
+                TELEPHONE = r.telephone,
+                 CUSTOMER_NO = r.customerNo                
             };
         }
 

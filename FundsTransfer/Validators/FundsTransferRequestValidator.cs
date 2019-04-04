@@ -32,11 +32,11 @@ namespace FundsTransfer.Validators
                    .NotNull()
                    .NotEmpty()
                    .MaximumLength(100);
-            RuleFor(req => req.branch_code)
+            RuleFor(req => req.branchCode)
                   .NotNull()
                   .NotEmpty()
                   .MaximumLength(100);
-            RuleFor(req => req.user_name)
+            RuleFor(req => req.userName)
                   .NotNull()
                   .NotEmpty()
                   .MaximumLength(100);          

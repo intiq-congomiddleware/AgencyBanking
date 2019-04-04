@@ -85,10 +85,10 @@ namespace FundsTransfer.Entities
                 dract = r.debitAccount,
                 trnamt = r.amount,
                 txnnarra = r.narration,
-                branch_code = r.branch_code,
+                branch_code = r.branchCode,
                 instr_code = "0",
                 product = _settings.product,
-                user_name = r.user_name
+                user_name = r.userName
             };
         }
     }
