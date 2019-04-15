@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using CashWithdrawalPlusChrg.Validators;
-using AgencyBanking.Entities;
-using AgencyBanking.Interceptors;
+using AccountOpening.Validators;
+using Channels.Entities;
+using Channels.Interceptors;
 using CashWithdrawal.Entities;
 using FluentValidation;
 using FluentValidation.AspNetCore;
@@ -23,7 +23,6 @@ using NJsonSchema;
 using NSwag.AspNetCore;
 using NSwag.SwaggerGeneration.Processors.Security;
 using Serilog;
-using CashWithdrawal.Models;
 
 namespace CashWithdrawalPlusChrg
 {
@@ -78,7 +77,7 @@ namespace CashWithdrawalPlusChrg
             services.Configure<AppSettings>(Configuration.GetSection("AppSettings"));
 
             //Validators
-            services.AddScoped<IValidator<Request>, CashWithDrawalRequestValidator>();
+            services.AddScoped<IValidator<CashWithdrawalRequest>, CashWithDrawalRequestValidator>();
 
             //Oracle  Repositories
             services.AddScoped<ICashWithdrawalRepository, CashWithdrawalRepository>();

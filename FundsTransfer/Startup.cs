@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using FundsTransfer.Validators;
-using AgencyBanking.Entities;
-using AgencyBanking.Interceptors;
+using AccountOpening.Validators;
+using Channels.Entities;
+using Channels.Interceptors;
 using FluentValidation;
 using FluentValidation.AspNetCore;
 using FundsTransfer.Entities;
-using FundsTransfer.Models;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -78,7 +77,7 @@ namespace FundsTransfer
             services.Configure<AppSettings>(Configuration.GetSection("AppSettings"));
 
             //Validators
-            services.AddScoped<IValidator<Request>, FundsTransferRequestValidator>();
+            services.AddScoped<IValidator<FundsTransferRequest>, FundsTransferRequestValidator>();
 
             //Oracle  Repositories
             services.AddScoped<IFundsTransferRepository, FundsTransferRepository>();

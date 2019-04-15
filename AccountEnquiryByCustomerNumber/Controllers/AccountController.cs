@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
-using AgencyBanking.Entities;
+using Channels.Entities;
 using AccountEnquiry.Entities;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
@@ -28,16 +28,16 @@ namespace AccountEnquiry.Controllers
         }
 
         [HttpPost("enquiry")]
-        [ProducesResponseType(typeof(List<Models.Response>), 201)]
+        [ProducesResponseType(typeof(List<AccountEnquiryResponse>), 201)]
         [ProducesResponseType(typeof(Response), 400)]
         [ProducesResponseType(typeof(Response), 500)]
         public async Task<IActionResult> enquiry([FromBody] CustomerEnquiryRequest request)
         {
-            List<Models.Response> b = new List<Models.Response>();
+            List<AccountEnquiryResponse> b = new List<AccountEnquiryResponse>();
             try
             {
                 if (!ModelState.IsValid)
-                    return BadRequest(AgencyBanking.Helpers.Utility.GetResponse(ModelState));
+                    return BadRequest(Channels.Helpers.Utility.GetResponse(ModelState));
 
 
                 var tuple = await _orclRepo.GetCustomerEnquiryByAccountNumber(request);
@@ -52,7 +52,7 @@ namespace AccountEnquiry.Controllers
             catch (Exception ex)
             {
                 _logger.LogError($"{request.customerNumber}:- {Environment.NewLine} {ex.ToString()}");
-                return StatusCode((int)HttpStatusCode.InternalServerError, AgencyBanking.Helpers.Utility.GetResponse(ex));
+                return StatusCode((int)HttpStatusCode.InternalServerError, Channels.Helpers.Utility.GetResponse(ex));
             }
 
             return CreatedAtAction("enquiry", b);

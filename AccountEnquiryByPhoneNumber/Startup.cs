@@ -1,8 +1,8 @@
 ﻿using System.Text;
 using AccountEnquiry.Entities;
 using AccountEnquiry.Validators;
-using AgencyBanking.Entities;
-using AgencyBanking.Interceptors;
+using Channels.Entities;
+using Channels.Interceptors;
 using FluentValidation;
 using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;

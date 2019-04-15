@@ -1,7 +1,7 @@
 ﻿using System.Text;
-using CashDeposit.Validators;
-using AgencyBanking.Entities;
-using AgencyBanking.Interceptors;
+using AccountOpening.Validators;
+using Channels.Entities;
+using Channels.Interceptors;
 using CashDeposit.Entities;
 using FluentValidation;
 using FluentValidation.AspNetCore;
@@ -19,7 +19,6 @@ using NJsonSchema;
 using NSwag.AspNetCore;
 using NSwag.SwaggerGeneration.Processors.Security;
 using Serilog;
-using CashDeposit.Models;
 
 namespace CashDeposit
 {
@@ -74,7 +73,7 @@ namespace CashDeposit
             services.Configure<AppSettings>(Configuration.GetSection("AppSettings"));
 
             //Validators
-            services.AddScoped<IValidator<Request>, CashDepositRequestValidator>();
+            services.AddScoped<IValidator<CashDepositRequest>, CashDepositRequestValidator>();
 
             //Oracle  Repositories
             services.AddScoped<ICashDepositRepository, CashDepositRepository>();

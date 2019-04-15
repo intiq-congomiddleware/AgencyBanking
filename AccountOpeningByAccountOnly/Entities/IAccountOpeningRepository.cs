@@ -1,4 +1,4 @@
-﻿using AccountOpening.Models;
+﻿using Channels.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +8,6 @@ namespace AccountOpening.Entities
 {
     public interface IAccountOpeningRepository
     {
-        Task<Response> OpenAccount(AccountOpeningRequest request);
-        AccountOpeningRequest GetAccountOpeningRequest(Request r);
+        Task<AccountOpeningResponse> OpenAccount(AccountOpeningRequest request);
     }
 }

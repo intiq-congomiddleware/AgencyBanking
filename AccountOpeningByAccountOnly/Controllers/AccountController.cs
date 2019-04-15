@@ -4,8 +4,8 @@ using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 using AccountOpening.Entities;
-using AgencyBanking.Entities;
-using AgencyBanking.Helpers;
+using Channels.Entities;
+using Channels.Helpers;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Cors;
@@ -31,30 +31,25 @@ namespace AccountOpening.Controllers
         }
 
         [HttpPost("create")]
-        [ProducesResponseType(typeof(Models.Response), 200)]
+        [ProducesResponseType(typeof(AccountOpeningResponse), 200)]
         [ProducesResponseType(typeof(Response), 400)]
         [ProducesResponseType(typeof(Response), 500)]
-        public async Task<IActionResult> create([FromBody] Models.Request request)
+        public async Task<IActionResult> create([FromBody] AccountOpeningRequest request)
         {
-            Models.Response a = new Models.Response();
-            List<string> messages = new List<string>();           
+            AccountOpeningResponse a = new AccountOpeningResponse();
+            List<string> messages = new List<string>();
+           
 
             try
             {
                 if (!ModelState.IsValid)
                     return BadRequest(Utility.GetResponse(ModelState));
 
-                var areq = _orclRepo.GetAccountOpeningRequest(request);
-
-                if (areq == null)
-                    return StatusCode((int)HttpStatusCode.BadRequest,
-                        Utility.GetResponse(Constant.UNPROCESSABLE_REQUEST, HttpStatusCode.BadRequest));
-
-                a = await _orclRepo.OpenAccount(areq);
+                a = await _orclRepo.OpenAccount(request);
             }
             catch (Exception ex)
             {
-                _logger.LogError($"{request.firstName} {request.lastName}:- {Environment.NewLine} {ex.ToString()}");
+                _logger.LogError($"{request.FIRST_NAME} {request.LAST_NAME}:- {Environment.NewLine} {ex.ToString()}");
                 return StatusCode((int)HttpStatusCode.InternalServerError, Utility.GetResponse(ex));
             }
 

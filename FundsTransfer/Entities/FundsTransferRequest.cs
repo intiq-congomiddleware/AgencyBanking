@@ -25,5 +25,6 @@ namespace FundsTransfer.Entities
         public string guid { get; set; }
         [JsonIgnore]
         public int trans_type { get; set; }
+        //public bool with_charges { get; set; }
     }
 }

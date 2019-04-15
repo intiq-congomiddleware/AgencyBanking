@@ -4,7 +4,7 @@
     "windowsAuthentication": false, 
     "anonymousAuthentication": true, 
     "iisExpress": {
-      "applicationUrl": "http://localhost:50269",
+      "applicationUrl": "http://localhost:50681",
       "sslPort": 0
     }
   },
@@ -17,7 +17,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "Channels": {
+    "AgencyBanking": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "api/values",

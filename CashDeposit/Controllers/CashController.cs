@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
-using AgencyBanking.Entities;
-using AgencyBanking.Helpers;
+using Channels.Entities;
+using Channels.Helpers;
 using CashDeposit.Entities;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
@@ -32,7 +32,7 @@ namespace CashDeposit.Controllers
         [ProducesResponseType(typeof(FundsTransferResponse), 200)]
         [ProducesResponseType(typeof(Response), 400)]
         [ProducesResponseType(typeof(Response), 500)]
-        public async Task<IActionResult> deposit([FromBody] Models.Request request)
+        public async Task<IActionResult> deposit([FromBody] CashDepositRequest request)
         {
             FundsTransferResponse a = new FundsTransferResponse();
             List<string> messages = new List<string>();
@@ -42,17 +42,11 @@ namespace CashDeposit.Controllers
                 if (!ModelState.IsValid)
                     return BadRequest(Utility.GetResponse(ModelState));
 
-                var areq = _orclRepo.GetCashDepositRequest(request);
-
-                if (areq == null)
-                    return StatusCode((int)HttpStatusCode.BadRequest,
-                        Utility.GetResponse(Constant.UNPROCESSABLE_REQUEST, HttpStatusCode.BadRequest));
-
-                a = await _orclRepo.CashDeposit(areq);
+                a = await _orclRepo.CashDeposit(request);
             }
             catch (Exception ex)
             {
-                _logger.LogError($"{request.creditAccount} {request.amount}:- {Environment.NewLine} {ex.ToString()}");
+                _logger.LogError($"{request.dract} {request.trnamt}:- {Environment.NewLine} {ex.ToString()}");
                 return StatusCode((int)HttpStatusCode.InternalServerError, Utility.GetResponse(ex));
             }
 

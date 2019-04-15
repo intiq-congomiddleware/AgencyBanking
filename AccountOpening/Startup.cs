@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AccountOpening.Entities;
-using AccountOpening.Models;
 using AccountOpening.Validators;
-using AgencyBanking.Entities;
-using AgencyBanking.Interceptors;
+using Channels.Entities;
+using Channels.Interceptors;
 using FluentValidation;
 using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -78,7 +77,7 @@ namespace AccountOpening
             services.Configure<AppSettings>(Configuration.GetSection("AppSettings"));
 
             //Validators
-            services.AddScoped<IValidator<Request>, AccountOpeningRequestValidator>();
+            services.AddScoped<IValidator<AccountOpeningRequest>, AccountOpeningRequestValidator>();
 
             //Oracle  Repositories
             services.AddScoped<IAccountOpeningRepository, AccountOpeningRepository>();

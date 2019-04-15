@@ -1,6 +1,6 @@
 ﻿using System.Text;
-using AgencyBanking.Entities;
-using AgencyBanking.Interceptors;
+using Channels.Entities;
+using Channels.Interceptors;
 using BalanceEnquiry.Entities;
 using BalanceEnquiry.Validators;
 using FluentValidation;

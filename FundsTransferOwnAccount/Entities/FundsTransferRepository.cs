@@ -1,5 +1,4 @@
-﻿using AgencyBanking.Entities;
-using FundsTransfer.Models;
+﻿using Channels.Entities;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using System;
@@ -77,21 +76,6 @@ namespace FundsTransfer.Entities
             }
 
             return res;
-        }
-
-        public FundsTransferRequest GetFundsTransferRequest(Request r)
-        {
-            return new FundsTransferRequest()
-            {
-                cract = r.creditAccount,
-                dract = r.debitAccount,
-                trnamt = r.amount,
-                txnnarra = r.narration,
-                branch_code = r.branchCode,
-                instr_code = "0",
-                product = _settings.product,
-                user_name = r.userName
-            };
         }
     }
 }

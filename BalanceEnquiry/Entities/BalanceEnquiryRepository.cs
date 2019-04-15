@@ -1,4 +1,4 @@
-﻿using AgencyBanking.Entities;
+﻿using Channels.Entities;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using System;
@@ -16,18 +16,18 @@ namespace BalanceEnquiry.Entities
         private readonly AppSettings _settings;
         private readonly ILogger<BalanceEnquiryRepository> _logger;
 
-        public BalanceEnquiryRepository(IOptions<AppSettings> settings,
+        public BalanceEnquiryRepository(IOptions<AppSettings> settings, 
             ILogger<BalanceEnquiryRepository> logger)
         {
             _settings = settings.Value;
             _logger = logger;
         }
 
-        public async Task<Tuple<Models.Response, Response>> GetBalanceByAccountNumber(BalanceEnquiryRequest request)
+        public async Task<Tuple<BEResponse, Response>> GetBalanceByAccountNumber(BalanceEnquiryRequest request)
         {
             BalanceEnquiryResponse br = new BalanceEnquiryResponse();
+            BEResponse ber = new BEResponse();
             Response res = new Response();
-
             string reqString; string respMsg = string.Empty; string resultContent = string.Empty;
             int respCode = 0;
 
@@ -51,7 +51,7 @@ namespace BalanceEnquiry.Entities
                     message = ex.Message,
                     status = false
                 };
-                _logger.LogInformation($"{request.accountNumber} : {ex.ToString()}");
+                _logger.LogInformation($"{request.accountnumber} : {ex.ToString()}");
             }
 
             res.message = respMsg;
@@ -66,6 +66,7 @@ namespace BalanceEnquiry.Entities
                 else
                 {
                     br = JsonHelper.fromJson<BalanceEnquiryResponse>(resultContent);
+                    ber = GetBEResponse(br, res);
                 }
             }
             else
@@ -77,34 +78,16 @@ namespace BalanceEnquiry.Entities
                 };
             }
 
-            return new Tuple<Models.Response, Response>(GetBalanceEnquiryResponse(br), res);
+            return new Tuple<BEResponse, Response>(ber, res);
         }
 
-        private Models.Response GetBalanceEnquiryResponse(BalanceEnquiryResponse br)
+        private BEResponse GetBEResponse(BalanceEnquiryResponse resp, Response res)
         {
-            return new Models.Response()
+            return new BEResponse()
             {
-                accountType = br.acct_type,
-                availableBalance = StringToDecimal(br.bal_available),
-                codAccountNumber = br.cod_acct_no,
-                codCcBrn = br.cod_cc_brn,
-                codProd = br.cod_prod,
-                currency = br.currency,
-                customerName = br.cust_name,
-                uncleardBalance = StringToDecimal(br.uncleard_bal)
+                availableBalance = resp.bal_available,
+                message = res.message
             };
-        }
-
-        private decimal StringToDecimal(string value)
-        {
-            decimal outValue = 0;
-
-            if(!string.IsNullOrEmpty(value) && decimal.TryParse(value, out outValue))
-            {
-                outValue = Convert.ToDecimal(value);
-            }
-
-            return outValue;
         }
     }
 }

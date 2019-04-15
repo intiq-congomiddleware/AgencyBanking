@@ -12,7 +12,7 @@ namespace AccountEnquiry.Validators
             RuleFor(req => req.customerNumber)
                   .NotNull()
                   .NotEmpty()
-                  .MaximumLength(40);
+                  .MaximumLength(20);
         }
     }
 }

@@ -1,5 +1,5 @@
 ﻿using AccountEnquiry.Entities;
-using AgencyBanking.Entities;
+using Channels.Entities;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using System;
@@ -24,7 +24,7 @@ namespace AccountEnquiry.Entities
             _logger = logger;
         }
 
-        public async Task<Tuple<List<Models.Response>, Response>> GetCustomerEnquiryByAccountNumber(CustomerEnquiryRequest request)
+        public async Task<Tuple<List<AccountEnquiryResponse>, Response>> GetCustomerEnquiryByAccountNumber(CustomerEnquiryRequest request)
         {
             List<AccountEnquiryResponse> br = new List<AccountEnquiryResponse>();
             Response res = new Response();
@@ -78,41 +78,7 @@ namespace AccountEnquiry.Entities
                 };
             }
 
-            return new Tuple<List<Models.Response>, Response>(GetAccountEnquiryResponse(br), res);
-        }
-
-        private List<Models.Response> GetAccountEnquiryResponse(List<AccountEnquiryResponse> ars)
-        {
-            List<Models.Response> resps = new List<Models.Response>();
-
-            foreach (var ar in ars)
-            {
-                Models.Response a = new Models.Response()
-                {
-                    accountStatusDormant = ar.ac_stat_dormant,
-                    availableBalance = StringToDecimal(ar.bal_available),
-                    codAccountNumber = ar.cod_acct_no,
-                    codAccountTitle = ar.cod_acct_title,
-                    codCcBrn = ar.cod_cc_brn,
-                    dateAccountOpen = ar.dat_acct_open
-                };
-
-                resps.Add(a);
-            }
-
-            return resps;
-        }
-
-        private decimal StringToDecimal(string value)
-        {
-            decimal outValue = 0;
-
-            if (!string.IsNullOrEmpty(value) && decimal.TryParse(value, out outValue))
-            {
-                outValue = Convert.ToDecimal(value);
-            }
-
-            return outValue;
+            return new Tuple<List<AccountEnquiryResponse>, Response>(br, res);
         }
     }
 }

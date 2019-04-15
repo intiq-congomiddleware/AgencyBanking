@@ -8,7 +8,7 @@ namespace CashDeposit.Entities
 {
     public class CashDepositRequest
     {
-        //[JsonIgnore]
+        [JsonIgnore]
         public string dract { get; set; }        
         public string cract { get; set; }
         public decimal trnamt { get; set; }

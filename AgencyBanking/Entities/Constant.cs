@@ -19,7 +19,6 @@ namespace AgencyBanking.Entities
         public const string TIMEOUT_STATUS = "Timeout";
         public const string FAILED_STATUS = "Failed";
         public const string UKNOWN_STATUS = "Unkown";
-        public const string UNPROCESSABLE_REQUEST = "Request could not be processed.";
 
         //Account Opening Responses
         public const string ACC_CREATION_SUCCESSFUL = "Account Created Successfully";

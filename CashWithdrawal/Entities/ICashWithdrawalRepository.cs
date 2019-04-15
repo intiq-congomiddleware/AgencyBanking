@@ -1,4 +1,4 @@
-﻿using CashWithdrawal.Models;
+﻿using Channels.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +9,5 @@ namespace CashWithdrawal.Entities
     public interface ICashWithdrawalRepository
     {
         Task<FundsTransferResponse> CashWithdrawal(CashWithdrawalRequest request);
-        CashWithdrawalRequest GetCashWithdrawalRequest(Request r);
     }
 }
