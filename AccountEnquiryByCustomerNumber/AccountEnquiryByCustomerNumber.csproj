@@ -19,8 +19,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="Channels">
-      <HintPath>..\..\Channels\Channels\bin\Debug\netcoreapp2.1\Channels.dll</HintPath>
+    <Reference Include="AgencyBanking">
+      <HintPath>..\AgencyBanking\bin\Debug\netcoreapp2.1\AgencyBanking.dll</HintPath>
     </Reference>
   </ItemGroup>
 

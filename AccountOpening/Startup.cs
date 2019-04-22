@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AccountOpening.Entities;
+using AccountOpening.Models;
 using AccountOpening.Validators;
-using Channels.Entities;
-using Channels.Interceptors;
+using AgencyBanking.Entities;
+using AgencyBanking.Interceptors;
 using FluentValidation;
 using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -77,7 +78,8 @@ namespace AccountOpening
             services.Configure<AppSettings>(Configuration.GetSection("AppSettings"));
 
             //Validators
-            services.AddScoped<IValidator<AccountOpeningRequest>, AccountOpeningRequestValidator>();
+            services.AddScoped<IValidator<Request>, AccountOpeningRequestValidator>();
+            services.AddScoped<LogToDB>();
 
             //Oracle  Repositories
             services.AddScoped<IAccountOpeningRepository, AccountOpeningRepository>();
@@ -87,16 +89,12 @@ namespace AccountOpening
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory
-            , IOptions<AppSettings> options)
+            , IOptions<AppSettings> options, LogToDB logToDB)
         {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
-
-            loggerFactory.AddSerilog();
-            app.UseRequestResponseLogger(options);
-            app.UseMvc();
 
             app.UseSwaggerUi3WithApiExplorer(settings =>
             {
@@ -116,6 +114,10 @@ namespace AccountOpening
                     Description = "Bearer token"
                 }));
             });
+
+            loggerFactory.AddSerilog();
+            app.UseRequestResponseLogger(options, logToDB);
+            app.UseMvc();          
         }
     }
 }

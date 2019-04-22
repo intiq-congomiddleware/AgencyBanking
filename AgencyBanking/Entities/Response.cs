@@ -5,6 +5,11 @@ using System.Threading.Tasks;
 
 namespace AgencyBanking.Entities
 {
+    public enum currency
+    {
+        CDF,
+        USD
+    }
     public class Response
     {
         public bool status { get; set; }

@@ -45,7 +45,7 @@ namespace AgencyBanking.Entities
             var oralConnect = new OracleConnection(_protector.Unprotect(_appSettings.ConnectionString));
             using (oralConnect)
             {
-                string queryAccount = $@"INSERT INTO {_appSettings.FlexSchema}.STTB_UPLOAD_CUST_ACCOUNT (requestId, customerNo, accountNo, customerName, branchCode, customerType, request, response)
+                string queryAccount = $@"INSERT INTO ACCOUNTOPENING (requestId, customerNo, accountNo, customerName, branchCode, customerType, request, response)
                                             VALUES (:requestId, :customerNo, :accountNo, :customerName, :branchCode, :customerType, :request, :response)";
 
                 oralConnect.Open();
@@ -82,11 +82,11 @@ namespace AgencyBanking.Entities
             };
 
             int r = 0;
-            var oralConnect = new OracleConnection(_protector.Unprotect(_appSettings.FlexConnection));
+            var oralConnect = new OracleConnection(_protector.Unprotect(_appSettings.ConnectionString));
             using (oralConnect)
             {
-                string queryAccount = $@"INSERT INTO {_appSettings.FlexSchema}.STTB_UPLOAD_CUST_ACCOUNT (requestId, debitAccount, creditAccount, product, amount, narration, userName, branchCode, status, message, actualTrnAmt, rate, trnRefNo)
-                                            VALUES (:requestId, :debitAccount, :creditAccount, :product, :amount, :narration, :userName, :branchCode, :status, :message, :actualTrnAmt, :rate, :trnRefNo)";
+                string queryAccount = $@"INSERT INTO FUNDSTRANSFERS (requestId, debitAccount, creditAccount, product, amount, narration, userName, branchCode, status, message, actualTrnAmt, rate, trnRefNo, userName)
+                                            VALUES (:requestId, :debitAccount, :creditAccount, :product, :amount, :narration, :userName, :branchCode, :status, :message, :actualTrnAmt, :rate, :trnRefNo, :userName)";
 
                 oralConnect.Open();
 
@@ -94,6 +94,6 @@ namespace AgencyBanking.Entities
             }
 
             return (r > 0);
-        }
+        }       
     }
 }

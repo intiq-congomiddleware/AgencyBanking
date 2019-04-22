@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Channels.Entities;
-using Channels.Helpers;
+using AgencyBanking.Entities;
+using AgencyBanking.Helpers;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -29,12 +29,12 @@ namespace BalanceEnquiry.Controllers
         }
 
         [HttpPost("enquiry")]
-        [ProducesResponseType(typeof(BEResponse), 200)]
+        [ProducesResponseType(typeof(Models.Response), 200)]
         [ProducesResponseType(typeof(Response), 400)]
         [ProducesResponseType(typeof(Response), 500)]
         public async Task<IActionResult> enquiry([FromBody]BalanceEnquiryRequest request)
         {
-            BEResponse br = new BEResponse();
+            Models.Response br = new Models.Response();
             try
             {
                 if (!ModelState.IsValid)

@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using AccountOpening.Validators;
-using Channels.Entities;
-using Channels.Interceptors;
+using FundsTransfer.Validators;
+using AgencyBanking.Entities;
+using AgencyBanking.Interceptors;
 using FluentValidation;
 using FluentValidation.AspNetCore;
 using FundsTransfer.Entities;
+using FundsTransfer.Models;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -77,26 +78,24 @@ namespace FundsTransfer
             services.Configure<AppSettings>(Configuration.GetSection("AppSettings"));
 
             //Validators
-            services.AddScoped<IValidator<FundsTransferRequest>, FundsTransferRequestValidator>();
+            services.AddScoped<IValidator<Request>, FundsTransferRequestValidator>();
 
             //Oracle  Repositories
             services.AddScoped<IFundsTransferRepository, FundsTransferRepository>();
+
+            services.AddScoped<LogToDB>();
 
             services.AddMvc().AddFluentValidation(fvc => { }).SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory
-            , IOptions<AppSettings> options)
+            , IOptions<AppSettings> options, LogToDB logToDB)
         {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-            }
-
-            loggerFactory.AddSerilog();
-            app.UseRequestResponseLogger(options);
-            app.UseMvc();
+            }         
 
             app.UseSwaggerUi3WithApiExplorer(settings =>
             {
@@ -116,6 +115,10 @@ namespace FundsTransfer
                     Description = "Bearer token"
                 }));
             });
+
+            loggerFactory.AddSerilog();
+            app.UseRequestResponseLogger(options, logToDB);
+            app.UseMvc();
         }
     }
 }

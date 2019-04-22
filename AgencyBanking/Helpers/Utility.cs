@@ -1,5 +1,7 @@
 ﻿using AgencyBanking.Entities;
+using Dapper;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
+using Oracle.ManagedDataAccess.Client;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -78,6 +80,24 @@ namespace AgencyBanking.Helpers
                 Console.WriteLine("GetReferenceNo", ex.Message + "" + ex.StackTrace, "");
             }
             return rand;
+        }
+
+        public static bool isValidBranch(string code, string flexConnection, string flexSchema)
+        {
+            bool r = false;
+            var oralConnect = new OracleConnection(flexConnection);
+            using (oralConnect)
+            {
+                string queryAccount = $@"SELECT * FROM {flexSchema}.STTM_BRANCH WHERE BRANCH_CODE = :code";
+
+                oralConnect.Open();
+
+                var res = oralConnect.Query<string>(queryAccount, new { code });
+
+                r = res != null && res.Count() > 0;
+            }
+
+            return r;
         }
     }
 }

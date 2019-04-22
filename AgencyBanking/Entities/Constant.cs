@@ -19,6 +19,7 @@ namespace AgencyBanking.Entities
         public const string TIMEOUT_STATUS = "Timeout";
         public const string FAILED_STATUS = "Failed";
         public const string UKNOWN_STATUS = "Unkown";
+        public const string UNPROCESSABLE_REQUEST = "Request could not be processed.";
 
         //Account Opening Responses
         public const string ACC_CREATION_SUCCESSFUL = "Account Created Successfully";
@@ -26,6 +27,7 @@ namespace AgencyBanking.Entities
 
         //Funds Transfer Responses
         public const string PST_FAILED_STATUS = "Posting Failed";
+        public const string REF_NO_NOT_FOUND = "Unknown Status: Transaction Ref not Found";
 
     }
 }

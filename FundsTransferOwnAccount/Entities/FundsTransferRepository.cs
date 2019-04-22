@@ -1,4 +1,5 @@
-﻿using Channels.Entities;
+﻿using AgencyBanking.Entities;
+using FundsTransfer.Models;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using System;
@@ -8,6 +9,7 @@ using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.DataProtection;
 
 namespace FundsTransfer.Entities
 {
@@ -15,12 +17,14 @@ namespace FundsTransfer.Entities
     {
         private readonly AppSettings _settings;
         private readonly ILogger<FundsTransferRepository> _logger;
+        private IDataProtector _protector;
 
         public FundsTransferRepository(IOptions<AppSettings> settings,
-            ILogger<FundsTransferRepository> logger)
+            ILogger<FundsTransferRepository> logger, IDataProtectionProvider provider)
         {
             _settings = settings.Value;
             _logger = logger;
+            _protector = provider.CreateProtector("treyryug");
         }
 
         public async Task<FundsTransferResponse> FundsTransfer(FundsTransferRequest request)
@@ -76,6 +80,36 @@ namespace FundsTransfer.Entities
             }
 
             return res;
+        }
+
+        public FundsTransferRequest GetFundsTransferRequest(Request r)
+        {
+            return new FundsTransferRequest()
+            {
+                cract = r.creditAccount,
+                dract = r.debitAccount,
+                trnamt = r.amount,
+                txnnarra = r.narration,
+                branch_code = r.branchCode,
+                instr_code = "0",
+                product = _settings.product,
+                user_name = r.userName,
+                l_acs_ccy = r.currency
+            };
+        }
+
+        public string EncData(string value)
+        {
+            string output = string.Empty;
+            try
+            {
+                output = _protector.Protect(value);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+            return output;
         }
     }
 }

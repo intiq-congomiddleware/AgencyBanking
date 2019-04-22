@@ -1,6 +1,6 @@
 ﻿using System.Text;
-using Channels.Entities;
-using Channels.Interceptors;
+using AgencyBanking.Entities;
+using AgencyBanking.Interceptors;
 using AccountEnquiry.Entities;
 using AccountEnquiry.Validators;
 using FluentValidation;
@@ -82,7 +82,7 @@ namespace AccountEnquiryByAccountNumber
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory
-            , IOptions<AppSettings> options)
+            , IOptions<AppSettings> options, LogToDB logToDB)
         {
             if (env.IsDevelopment())
             {
@@ -90,7 +90,7 @@ namespace AccountEnquiryByAccountNumber
             }
 
             loggerFactory.AddSerilog();
-            app.UseRequestResponseLogger(options);
+            app.UseRequestResponseLogger(options, logToDB);
             app.UseMvc();
 
             app.UseSwaggerUi3WithApiExplorer(settings =>

@@ -1,4 +1,5 @@
-﻿using Channels.Entities;
+﻿using AgencyBanking.Entities;
+using CashWithdrawal.Models;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using System;
@@ -8,6 +9,7 @@ using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.DataProtection;
 
 namespace CashWithdrawal.Entities
 {
@@ -15,12 +17,14 @@ namespace CashWithdrawal.Entities
     {
         private readonly AppSettings _settings;
         private readonly ILogger<CashWithdrawalRepository> _logger;
+        private IDataProtector _protector;
 
         public CashWithdrawalRepository(IOptions<AppSettings> settings,
-            ILogger<CashWithdrawalRepository> logger)
+            ILogger<CashWithdrawalRepository> logger, IDataProtectionProvider provider)
         {
             _settings = settings.Value;
             _logger = logger;
+            _protector = provider.CreateProtector("treyryug");
         }
 
         public async Task<FundsTransferResponse> CashWithdrawal(CashWithdrawalRequest request)
@@ -29,7 +33,7 @@ namespace CashWithdrawal.Entities
             string reqString; string respMsg = string.Empty; string resultContent = string.Empty;
             int respCode = 0;
 
-            request.cract = _settings.GLAccount;
+            //request.cract = _settings.GLAccount;
 
             try
             {
@@ -77,6 +81,35 @@ namespace CashWithdrawal.Entities
             }
 
             return res;
+        }
+        public CashWithdrawalRequest GetCashWithdrawalRequest(Request r)
+        {
+            return new CashWithdrawalRequest()
+            {
+                dract = r.debitAccount,
+                trnamt = r.amount,
+                txnnarra = r.narration,
+                branch_code = r.branchCode,
+                cract = r.creditAccount,
+                instr_code = "0",
+                product = _settings.product,
+                user_name = r.userName,
+                l_acs_ccy = r.currency
+            };
+        }
+
+        public string EncData(string value)
+        {
+            string output = string.Empty;
+            try
+            {
+                output = _protector.Protect(value);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+            return output;
         }
     }
 }

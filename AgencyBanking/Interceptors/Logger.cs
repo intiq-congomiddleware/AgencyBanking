@@ -1,5 +1,6 @@
 ﻿using AgencyBanking.Entities;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.DataProtection;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.Internal;
 using Microsoft.Extensions.Configuration;
@@ -24,12 +25,16 @@ namespace AgencyBanking.Interceptors
         private readonly RequestDelegate _next;
         IOptions<AppSettings> _settings;
         private readonly ILogger<Logger> _logger;
+        private IDataProtector _protector;
+        private LogToDB _logToDB;
 
-        public Logger(RequestDelegate next, ILogger<Logger> logger, IOptions<AppSettings> settings)
+        public Logger(RequestDelegate next, ILogger<Logger> logger
+            , IOptions<AppSettings> settings, LogToDB logToDB)
         {
             _next = next;
             _settings = settings;
             _logger = logger;
+            _logToDB = logToDB;
         }
 
         public async Task Invoke(HttpContext context)
@@ -74,12 +79,33 @@ namespace AgencyBanking.Interceptors
                         logValues.Add("Status: " + status);
                         logValues.Add("TimeStamp: " + timestamp);
 
+                        if (_settings.Value.logAOToDB)
+                        {
+                            try
+                            {
+                                await _logToDB.AccountOpeningDump(requestText, responseText);
+                            }
+                            catch (Exception ex)
+                            {
+                                _logger.LogError($"_logToDB.AccountOpeningDump:- {ex.ToString()}");
+                            }
+                        }
+
+                        if (_settings.Value.logFTToDB)
+                        {
+                            try
+                            {
+                                await _logToDB.FundsTransferDump(requestText, responseText);
+                            }
+                            catch (Exception ex)
+                            {
+                                _logger.LogError($"_logToDB.FundsTransferDump:- {ex.ToString()}");
+                            }
+                            
+                        }
 
                         reqId = (!string.IsNullOrEmpty(reqId)) ? reqId : DateTime.Now.ToString(Constant.TIMESTAMP_FORMAT_2);
 
-                        //_logger.LogInformation($"{reqId}:- {Environment.NewLine}  {JsonHelper.toJson(logValues)}");
-
-                        //_logger.LogInformation($"{reqId}:- " + "{logValues}", logValues);
                         _logger.LogInformation($"{reqId}:-" + "{@LogValues}", logValues);
                     }
                     catch (Exception ex)
@@ -113,9 +139,9 @@ namespace AgencyBanking.Interceptors
     public static class RequestResponseLoggerMiddlewareExtensions
     {
         public static IApplicationBuilder UseRequestResponseLogger(this IApplicationBuilder builder
-            , IOptions<AppSettings> options)
+            , IOptions<AppSettings> options, LogToDB logToDB)
         {
-            return builder.UseMiddleware<Logger>(options);
+            return builder.UseMiddleware<Logger>(options, logToDB);
         }
     }
 }

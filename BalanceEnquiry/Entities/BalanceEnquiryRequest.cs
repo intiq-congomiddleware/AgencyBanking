@@ -7,6 +7,6 @@ namespace BalanceEnquiry.Entities
 {
     public class BalanceEnquiryRequest
     {
-        public string accountnumber { get; set; }
+        public string accountNumber { get; set; }
     }
 }

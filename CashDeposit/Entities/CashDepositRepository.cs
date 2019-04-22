@@ -1,4 +1,5 @@
-﻿using Channels.Entities;
+﻿using AgencyBanking.Entities;
+using CashDeposit.Models;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using System;
@@ -8,6 +9,7 @@ using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.DataProtection;
 
 namespace CashDeposit.Entities
 {
@@ -15,12 +17,14 @@ namespace CashDeposit.Entities
     {
         private readonly AppSettings _settings;
         private readonly ILogger<CashDepositRepository> _logger;
+        private IDataProtector _protector;
 
         public CashDepositRepository(IOptions<AppSettings> settings,
-            ILogger<CashDepositRepository> logger)
+            ILogger<CashDepositRepository> logger, IDataProtectionProvider provider)
         {
             _settings = settings.Value;
             _logger = logger;
+            _protector = provider.CreateProtector("treyryug");
         }
 
         public async Task<FundsTransferResponse> CashDeposit(CashDepositRequest request)
@@ -28,8 +32,6 @@ namespace CashDeposit.Entities
             FundsTransferResponse res = new FundsTransferResponse();
             string reqString; string respMsg = string.Empty; string resultContent = string.Empty;
             int respCode = 0;
-
-            request.dract = _settings.GLAccount;
 
             try
             {
@@ -48,7 +50,7 @@ namespace CashDeposit.Entities
                 respCode = (int)HttpStatusCode.RequestTimeout;
                 res = new FundsTransferResponse()
                 {
-                    message =Constant.TIMEOUT_MSG,
+                    message = Constant.TIMEOUT_MSG,
                     status = Constant.TIMEOUT_STATUS
                 };
 
@@ -77,6 +79,36 @@ namespace CashDeposit.Entities
             }
 
             return res;
+        }
+
+        public CashDepositRequest GetCashDepositRequest(Request r)
+        {
+            return new CashDepositRequest()
+            {
+                cract = r.creditAccount,
+                trnamt = r.amount,
+                txnnarra = r.narration,
+                branch_code = r.branchCode,
+                dract = r.debitAccount,
+                instr_code = "0",
+                user_name = r.userName,
+                product = _settings.product,
+                l_acs_ccy = r.currency
+            };
+        }
+
+        public string EncData(string value)
+        {
+            string output = string.Empty;
+            try
+            {
+                output = _protector.Protect(value);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+            return output;
         }
     }
 }

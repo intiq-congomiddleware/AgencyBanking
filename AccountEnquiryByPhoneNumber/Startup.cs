@@ -1,8 +1,8 @@
 ﻿using System.Text;
 using AccountEnquiry.Entities;
 using AccountEnquiry.Validators;
-using Channels.Entities;
-using Channels.Interceptors;
+using AgencyBanking.Entities;
+using AgencyBanking.Interceptors;
 using FluentValidation;
 using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -82,7 +82,7 @@ namespace AccountEnquiryByPhoneNumber
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory
-            , IOptions<AppSettings> options)
+            , IOptions<AppSettings> options, LogToDB logToDB)
         {
             if (env.IsDevelopment())
             {
@@ -90,7 +90,7 @@ namespace AccountEnquiryByPhoneNumber
             }
 
             loggerFactory.AddSerilog();
-            app.UseRequestResponseLogger(options);
+            app.UseRequestResponseLogger(options, logToDB);
             app.UseMvc();
 
             app.UseSwaggerUi3WithApiExplorer(settings =>

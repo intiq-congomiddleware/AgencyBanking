@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
-using Channels.Entities;
-using Channels.Helpers;
+using AgencyBanking.Entities;
+using AgencyBanking.Helpers;
 using CashWithdrawal.Entities;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
@@ -32,7 +32,7 @@ namespace CashWithdrawal.Controllers
         [ProducesResponseType(typeof(FundsTransferResponse), 200)]
         [ProducesResponseType(typeof(FundsTransferResponse), 400)]
         [ProducesResponseType(typeof(FundsTransferResponse), 500)]
-        public async Task<IActionResult> withdrawal([FromBody] CashWithdrawalRequest request)
+        public async Task<IActionResult> withdrawal([FromBody] Models.Request request)
         {
             FundsTransferResponse a = new FundsTransferResponse();
             List<string> messages = new List<string>();
@@ -42,15 +42,30 @@ namespace CashWithdrawal.Controllers
                 if (!ModelState.IsValid)
                     return BadRequest(Utility.GetResponse(ModelState));
 
-                a = await _orclRepo.CashWithdrawal(request);
+                var areq = _orclRepo.GetCashWithdrawalRequest(request);
+
+                if (areq == null)
+                    return StatusCode((int)HttpStatusCode.BadRequest,
+                        Utility.GetResponse(Constant.UNPROCESSABLE_REQUEST, HttpStatusCode.BadRequest));
+
+                a = await _orclRepo.CashWithdrawal(areq);
             }
             catch (Exception ex)
             {
-                _logger.LogError($"{request.dract} {request.trnamt}:- {Environment.NewLine} {ex.ToString()}");
+                _logger.LogError($"{request.debitAccount} {request.amount}:- {Environment.NewLine} {ex.ToString()}");
                 return StatusCode((int)HttpStatusCode.InternalServerError, Utility.GetResponse(ex));
             }
 
             return CreatedAtAction("withdrawal", a);
+        }
+
+        [HttpGet("encdata/{value}")]
+        [ProducesResponseType(typeof(string), 200)]
+        [ProducesResponseType(typeof(Response), 400)]
+        [ProducesResponseType(typeof(Response), 500)]
+        public async Task<IActionResult> encdata(string value)
+        {
+            return Ok(_orclRepo.EncData(value));
         }
     }
 }

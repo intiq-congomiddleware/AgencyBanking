@@ -1,5 +1,5 @@
 ﻿using AccountEnquiry.Entities;
-using Channels.Entities;
+using AgencyBanking.Entities;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using System;
@@ -17,14 +17,14 @@ namespace AccountEnquiry.Entities
         private readonly AppSettings _settings;
         private readonly ILogger<AccountEnquiryRepository> _logger;
 
-        public AccountEnquiryRepository(IOptions<AppSettings> settings, 
+        public AccountEnquiryRepository(IOptions<AppSettings> settings,
             ILogger<AccountEnquiryRepository> logger)
         {
             _settings = settings.Value;
             _logger = logger;
         }
 
-        public async Task<Tuple<AccountEnquiryResponse, Response>> GetAccountEnquiryByAccountNumber(AccountEnquiryRequest request)
+        public async Task<Tuple<Models.Response, Response>> GetAccountEnquiryByAccountNumber(AccountEnquiryRequest request)
         {
             AccountEnquiryResponse br = new AccountEnquiryResponse();
             Response res = new Response();
@@ -78,7 +78,33 @@ namespace AccountEnquiry.Entities
                 };
             }
 
-            return new Tuple<AccountEnquiryResponse, Response>(br, res);
+            return new Tuple<Models.Response, Response>(GetAccountEnquiryResponse(br), res);
+        }
+
+        private Models.Response GetAccountEnquiryResponse(AccountEnquiryResponse ar)
+        {
+            return new Models.Response()
+            {
+                accountStatusDormant = ar.ac_stat_dormant,
+                availableBalance = StringToDecimal(ar.bal_available),
+                codAccountNumber = ar.cod_acct_no,
+                codAccountTitle = ar.cod_acct_title,
+                codCcBrn = ar.cod_cc_brn,
+                dateAccountOpen = ar.dat_acct_open,
+                phoneNumber = ar.customer_phonenumber
+            };
+        }
+
+        private decimal StringToDecimal(string value)
+        {
+            decimal outValue = 0;
+
+            if (!string.IsNullOrEmpty(value) && decimal.TryParse(value, out outValue))
+            {
+                outValue = Convert.ToDecimal(value);
+            }
+
+            return outValue;
         }
     }
 }

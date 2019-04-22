@@ -1,0 +1,17 @@
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\TransactionStatus\bin\Debug\netcoreapp2.1\TransactionStatus.deps.json
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\TransactionStatus\bin\Debug\netcoreapp2.1\TransactionStatus.runtimeconfig.json
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\TransactionStatus\bin\Debug\netcoreapp2.1\TransactionStatus.runtimeconfig.dev.json
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\TransactionStatus\bin\Debug\netcoreapp2.1\TransactionStatus.dll
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\TransactionStatus\bin\Debug\netcoreapp2.1\TransactionStatus.pdb
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\TransactionStatus\bin\Debug\netcoreapp2.1\AgencyBanking.dll
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\TransactionStatus\bin\Debug\netcoreapp2.1\AgencyBanking.pdb
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\TransactionStatus\obj\Debug\netcoreapp2.1\TransactionStatus.csprojAssemblyReference.cache
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\TransactionStatus\obj\Debug\netcoreapp2.1\TransactionStatus.csproj.CoreCompileInputs.cache
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\TransactionStatus\obj\Debug\netcoreapp2.1\TransactionStatus.RazorAssemblyInfo.cache
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\TransactionStatus\obj\Debug\netcoreapp2.1\TransactionStatus.RazorAssemblyInfo.cs
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\TransactionStatus\obj\Debug\netcoreapp2.1\TransactionStatus.AssemblyInfoInputs.cache
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\TransactionStatus\obj\Debug\netcoreapp2.1\TransactionStatus.AssemblyInfo.cs
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\TransactionStatus\obj\Debug\netcoreapp2.1\TransactionStatus.RazorTargetAssemblyInfo.cache
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\TransactionStatus\obj\Debug\netcoreapp2.1\TransactionStatus.csproj.CopyComplete
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\TransactionStatus\obj\Debug\netcoreapp2.1\TransactionStatus.dll
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\TransactionStatus\obj\Debug\netcoreapp2.1\TransactionStatus.pdb

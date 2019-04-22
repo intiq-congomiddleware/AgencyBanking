@@ -1,5 +1,5 @@
 ﻿using AccountEnquiry.Entities;
-using Channels.Entities;
+using AgencyBanking.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +9,6 @@ namespace AccountEnquiry.Entities
 {
     public interface IAccountEnquiryRepository
     {
-        Task<Tuple<AccountEnquiryResponse, Response>> GetAccountEnquiryByAccountNumber(AccountEnquiryRequest request);
+        Task<Tuple<Models.Response, Response>> GetAccountEnquiryByAccountNumber(AccountEnquiryRequest request);
     }
 }

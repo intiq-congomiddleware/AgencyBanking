@@ -1,4 +1,6 @@
-﻿using FluentValidation.Validators;
+﻿using AgencyBanking.Entities;
+using AgencyBanking.Helpers;
+using FluentValidation.Validators;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,10 +10,11 @@ namespace CashWithdrawalPlusChrg.Validators
 {
     public class RequestIdValidator : PropertyValidator
     {
-        public RequestIdValidator()
+        private readonly AppSettings settings;
+        public RequestIdValidator(AppSettings _settings)
              : base("Invalid {PropertyName}, {IdValue}.")
         {
-
+            settings = _settings;
         }
 
         protected override bool IsValid(PropertyValidatorContext context)
@@ -37,6 +40,20 @@ namespace CashWithdrawalPlusChrg.Validators
 
             //confirm branch
             string branchString = idString.Substring(14, 17);
+            try
+            {
+                if (!Utility.isValidBranch(branchString, settings.FlexConnection, settings.FlexSchema))
+                {
+                    context.MessageFormatter.AppendArgument("IdValue", idString);
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                context.MessageFormatter.AppendArgument("IdValue", idString);
+                return false;
+            }
 
             //confirm last four digits
             string randomFour = idString.Substring(idString.Length - 4);

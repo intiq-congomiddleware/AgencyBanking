@@ -1,4 +1,6 @@
-﻿using Channels.Entities;
+﻿using AccountOpening.Models;
+using AgencyBanking.Entities;
+using Microsoft.AspNetCore.DataProtection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using System;
@@ -15,15 +17,17 @@ namespace AccountOpening.Entities
     {
         private readonly AppSettings _settings;
         private readonly ILogger<AccountOpeningRepository> _logger;
+        private IDataProtector _protector;
 
         public AccountOpeningRepository(IOptions<AppSettings> settings,
-            ILogger<AccountOpeningRepository> logger)
+            ILogger<AccountOpeningRepository> logger, IDataProtectionProvider provider)
         {
             _settings = settings.Value;
             _logger = logger;
+            _protector = provider.CreateProtector("treyryug");
         }
 
-        public async Task<AccountOpeningResponse> OpenAccount(AccountOpeningRequest request)
+        public async Task<Models.Response> OpenAccount(AccountOpeningRequest request)
         {
             AccountOpeningResponse res = new AccountOpeningResponse();
             string reqString; string respMsg = string.Empty; string resultContent = string.Empty;
@@ -72,7 +76,63 @@ namespace AccountOpening.Entities
                 res.message = Constant.UKNOWN_MSG;
             }
 
-            return res;
+            return GetResponse(res);
+        }
+
+        public AccountOpeningRequest GetAccountOpeningRequest(Request r)
+        {
+            return new AccountOpeningRequest()
+            {
+                ACCOUNT_CLASS = r.accountClass,
+                AMOUNTS_CCY = r.amountsCcy,
+                BRANCH_CODE = r.branchCode,
+                COUNTRY = r.country,
+                CUSTOMER_CATEGORY = r.customerCategory,
+                CUSTOMER_NAME = r.customerName,
+                CUSTOMER_PREFIX = r.customerPrefix,
+                CUSTOMER_TYPE = r.customerType,
+                DATE_OF_BIRTH = r.dateOfBirth,
+                D_ADDRESS1 = r.dAddress1,
+                D_ADDRESS2 = r.dAddress2,
+                D_ADDRESS3 = r.dAddress3,
+                E_MAIL = r.email,
+                FIRST_NAME = r.firstName,
+                LANGUAGE = r.language,
+                LAST_NAME = r.lastName,
+                MIDDLE_NAME = r.middleName,
+                MINOR = r.minor,
+                NATIONALITY = r.nationality,
+                SEX = r.sex,
+                SHORT_NAME = r.shortName,
+                TELEPHONE = r.telephone,
+                 CUSTOMER_NO = r.customerNo                
+            };
+        }
+
+        private Models.Response GetResponse(AccountOpeningResponse r)
+        {
+            return new Models.Response()
+            {
+                accountNumber = r.accounT_NO,
+                branchCode = r.brancH_CODE,
+                customerName = r.customeR_NAME,
+                customerNumber = r.customeR_NO,
+                message = r.message
+            };
+        }
+
+        public string EncData(string value)
+        {
+            string output = string.Empty;
+            try
+            {
+                output = _protector.Protect(value);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+            return output;
         }
     }
 }

@@ -9,6 +9,7 @@ namespace CashWithdrawal.Models
     {
         public string debitAccount { get; set; }
         public string creditAccount { get; set; }
+        public string currency { get; set; }
         public string userName { get; set; }
         public string branchCode { get; set; }
         public decimal amount { get; set; }      

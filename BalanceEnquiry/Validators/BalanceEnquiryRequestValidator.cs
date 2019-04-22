@@ -9,7 +9,7 @@ namespace BalanceEnquiry.Validators
         public BalanceEnquiryRequestValidator()
         {
 
-            RuleFor(req => req.accountnumber)
+            RuleFor(req => req.accountNumber)
                   .NotNull()
                   .NotEmpty()
                   .MaximumLength(20);

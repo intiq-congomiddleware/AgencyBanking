@@ -1,4 +1,6 @@
 ﻿using AccountOpening.Entities;
+using AccountOpening.Models;
+using AgencyBanking.Entities;
 using FluentValidation;
 using System;
 using System.Collections.Generic;
@@ -7,97 +9,105 @@ using System.Threading.Tasks;
 
 namespace AccountOpening.Validators
 {
-    public class AccountOpeningRequestValidator : AbstractValidator<AccountOpeningRequest>
+    public class AccountOpeningRequestValidator : AbstractValidator<Request>
     {
-        public AccountOpeningRequestValidator()
+        private readonly AppSettings settings;
+        public AccountOpeningRequestValidator(AppSettings _settings)
         {
-            RuleFor(req => req.CUSTOMER_TYPE)
+            settings = _settings;
+            RuleFor(req => req.customerType)
            .NotNull()
            .NotEmpty();
 
-            RuleFor(req => req.CUSTOMER_NAME)
+            RuleFor(req => req.customerName)
            .NotNull()
            .NotEmpty();
 
-            RuleFor(req => req.SHORT_NAME)
+            RuleFor(req => req.shortName)
            .NotNull()
            .NotEmpty();
 
-            RuleFor(req => req.CUSTOMER_CATEGORY)
+            RuleFor(req => req.customerCategory)
            .NotNull()
            .NotEmpty();
 
-            RuleFor(req => req.CUSTOMER_PREFIX)
+            RuleFor(req => req.customerPrefix)
            .NotNull()
            .NotEmpty();
 
-            RuleFor(req => req.FIRST_NAME)
+            RuleFor(req => req.firstName)
            .NotNull()
            .NotEmpty();
 
-            RuleFor(req => req.MIDDLE_NAME)
+            RuleFor(req => req.middleName)
            .NotNull()
            .NotEmpty();
 
-            RuleFor(req => req.LAST_NAME)
+            RuleFor(req => req.lastName)
            .NotNull()
            .NotEmpty();
 
-            RuleFor(req => req.DATE_OF_BIRTH)
+            RuleFor(req => req.dateOfBirth)
            .NotNull()
            .NotEmpty();
 
-            RuleFor(req => req.MINOR)
+            RuleFor(req => req.minor)
            .NotNull()
            .NotEmpty();
 
-            RuleFor(req => req.SEX)
+            RuleFor(req => req.sex)
            .NotNull()
            .NotEmpty();
 
-            RuleFor(req => req.D_ADDRESS1)
+            RuleFor(req => req.dAddress1)
            .NotNull()
            .NotEmpty();
 
-            RuleFor(req => req.D_ADDRESS2)
+            RuleFor(req => req.dAddress2)
            .NotNull()
            .NotEmpty();
 
-            RuleFor(req => req.D_ADDRESS3)
+            RuleFor(req => req.dAddress3)
            .NotNull()
            .NotEmpty();
 
-            RuleFor(req => req.TELEPHONE)
+            RuleFor(req => req.telephone)
            .NotNull()
            .NotEmpty();
 
-            RuleFor(req => req.E_MAIL)
+            RuleFor(req => req.email)
            .NotNull()
            .NotEmpty();
 
-            RuleFor(req => req.AMOUNTS_CCY)
+            RuleFor(req => req.amountsCcy)
            .NotNull()
            .NotEmpty();
 
-            RuleFor(req => req.BRANCH_CODE)
+            RuleFor(req => req.branchCode)
            .NotNull()
            .NotEmpty();
 
-            RuleFor(req => req.COUNTRY)
+            RuleFor(req => req.country)
            .NotNull()
            .NotEmpty();
 
-            RuleFor(req => req.NATIONALITY)
+            RuleFor(req => req.nationality)
            .NotNull()
            .NotEmpty();
 
-            RuleFor(req => req.LANGUAGE)
+            RuleFor(req => req.language)
            .NotNull()
            .NotEmpty();
 
-            RuleFor(req => req.ACCOUNT_CLASS)
+            RuleFor(req => req.accountClass)
            .NotNull()
            .NotEmpty();
+
+            RuleFor(req => req.requestId)
+           .NotNull()
+           .NotEmpty()
+           .MaximumLength(100)
+           .SetValidator(new RequestIdValidator(settings));
         }
     }
 }

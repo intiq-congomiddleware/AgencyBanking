@@ -1,4 +1,4 @@
-﻿using Channels.Entities;
+﻿using AgencyBanking.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,6 +8,6 @@ namespace BalanceEnquiry.Entities
 {
     public interface IBalanceEnquiryRepository
     {
-        Task<Tuple<BEResponse, Response>> GetBalanceByAccountNumber(BalanceEnquiryRequest request);
+        Task<Tuple<Models.Response, Response>> GetBalanceByAccountNumber(BalanceEnquiryRequest request);
     }
 }

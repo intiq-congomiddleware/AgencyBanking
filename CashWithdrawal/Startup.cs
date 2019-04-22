@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using AccountOpening.Validators;
-using Channels.Entities;
-using Channels.Interceptors;
+using CashWithdrawal.Validators;
+using AgencyBanking.Entities;
+using AgencyBanking.Interceptors;
 using CashWithdrawal.Entities;
 using FluentValidation;
 using FluentValidation.AspNetCore;
@@ -23,6 +23,7 @@ using NJsonSchema;
 using NSwag.AspNetCore;
 using NSwag.SwaggerGeneration.Processors.Security;
 using Serilog;
+using CashWithdrawal.Models;
 
 namespace CashWithdrawal
 {
@@ -77,7 +78,7 @@ namespace CashWithdrawal
             services.Configure<AppSettings>(Configuration.GetSection("AppSettings"));
 
             //Validators
-            services.AddScoped<IValidator<CashWithdrawalRequest>, CashWithDrawalRequestValidator>();
+            services.AddScoped<IValidator<Request>, CashWithDrawalRequestValidator>();
 
             //Oracle  Repositories
             services.AddScoped<ICashWithdrawalRepository, CashWithdrawalRepository>();
@@ -87,17 +88,13 @@ namespace CashWithdrawal
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory
-            , IOptions<AppSettings> options)
+            , IOptions<AppSettings> options, LogToDB logToDB)
         {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
-
-            loggerFactory.AddSerilog();
-            app.UseRequestResponseLogger(options);
-            app.UseMvc();
-
+          
             app.UseSwaggerUi3WithApiExplorer(settings =>
             {
                 settings.GeneratorSettings.DefaultPropertyNameHandling = PropertyNameHandling.CamelCase;
@@ -116,6 +113,10 @@ namespace CashWithdrawal
                     Description = "Bearer token"
                 }));
             });
+
+            loggerFactory.AddSerilog();
+            app.UseRequestResponseLogger(options, logToDB);
+            app.UseMvc();
         }
     }
 }

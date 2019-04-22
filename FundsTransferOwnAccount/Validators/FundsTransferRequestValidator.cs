@@ -1,32 +1,61 @@
-﻿using FluentValidation;
-using FundsTransfer.Entities;
+﻿using AgencyBanking.Entities;
+using FluentValidation;
+using FundsTransfer.Models;
+using FundsTransferOwnAccount.Validators;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace AccountOpening.Validators
+namespace FundsTransfer.Validators
 {
-    public class FundsTransferRequestValidator : AbstractValidator<FundsTransferRequest>
+    public class FundsTransferRequestValidator : AbstractValidator<Request>
     {
-        public FundsTransferRequestValidator()
+        private readonly AppSettings settings;
+        public FundsTransferRequestValidator(AppSettings _settings)
         {
-            RuleFor(req => req.dract)
+            settings = _settings;
+            RuleFor(req => req.debitAccount)
+                  .NotNull()
+                  .NotEmpty()
+                  .MaximumLength(20);
+
+            RuleFor(req => req.creditAccount)
                  .NotNull()
                  .NotEmpty()
                  .MaximumLength(20);
-            RuleFor(req => req.cract)
+
+            RuleFor(req => req.amount)
                  .NotNull()
                  .NotEmpty()
-                 .MaximumLength(20);
-            RuleFor(req => req.trnamt)
-                    .NotNull()
-                    .NotEmpty()
-                    .GreaterThan(0);
-            RuleFor(req => req.txnnarra)
-                    .NotNull()
-                    .NotEmpty()
-                    .MaximumLength(100);
+                 .GreaterThan(0);
+
+            RuleFor(req => req.narration)
+                 .NotNull()
+                 .NotEmpty()
+                 .MaximumLength(100);
+
+            RuleFor(req => req.requestId)
+                 .NotNull()
+                 .NotEmpty()
+                 .MaximumLength(100)
+                 .SetValidator(new RequestIdValidator(settings));
+
+            RuleFor(req => req.branchCode)
+                  .NotNull()
+                  .NotEmpty()
+                  .MaximumLength(100);
+
+            RuleFor(req => req.userName)
+                  .NotNull()
+                  .NotEmpty()
+                  .MaximumLength(100);
+
+            RuleFor(req => req.currency)
+                 .NotNull()
+                 .NotEmpty()
+                 .MaximumLength(100)
+                 .SetValidator(new CurrencyEnumValidator());
         }
     }
 }

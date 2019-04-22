@@ -1,7 +1,7 @@
 ﻿using System.Text;
-using AccountOpening.Validators;
-using Channels.Entities;
-using Channels.Interceptors;
+using CashDeposit.Validators;
+using AgencyBanking.Entities;
+using AgencyBanking.Interceptors;
 using CashDeposit.Entities;
 using FluentValidation;
 using FluentValidation.AspNetCore;
@@ -19,6 +19,7 @@ using NJsonSchema;
 using NSwag.AspNetCore;
 using NSwag.SwaggerGeneration.Processors.Security;
 using Serilog;
+using CashDeposit.Models;
 
 namespace CashDeposit
 {
@@ -73,7 +74,7 @@ namespace CashDeposit
             services.Configure<AppSettings>(Configuration.GetSection("AppSettings"));
 
             //Validators
-            services.AddScoped<IValidator<CashDepositRequest>, CashDepositRequestValidator>();
+            services.AddScoped<IValidator<Request>, CashDepositRequestValidator>();
 
             //Oracle  Repositories
             services.AddScoped<ICashDepositRepository, CashDepositRepository>();
@@ -83,16 +84,12 @@ namespace CashDeposit
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory
-            , IOptions<AppSettings> options)
+            , IOptions<AppSettings> options, LogToDB logToDB)
         {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-            }
-
-            loggerFactory.AddSerilog();
-            app.UseRequestResponseLogger(options);
-            app.UseMvc();
+            }           
 
             app.UseSwaggerUi3WithApiExplorer(settings =>
             {
@@ -112,6 +109,10 @@ namespace CashDeposit
                     Description = "Bearer token"
                 }));
             });
+
+            loggerFactory.AddSerilog();
+            app.UseRequestResponseLogger(options, logToDB);
+            app.UseMvc();
         }
     }
 }
