@@ -31,10 +31,10 @@ namespace AgencyBanking.Entities
 
             LogAccountOpening a = new LogAccountOpening()
             {
-                accountNo = res.ACCOUNT_NO,
+                accountNo = res.accountNumber,
                 branchCode = req.branchCode,
-                customerName = res.CUSTOMER_NAME,
-                customerNo = res.CUSTOMER_NO,
+                customerName = res.customerName,
+                customerNo = res.customerNumber,
                 customerType = req.customerType,
                 request = request,
                 requestId = req.requestId,
@@ -94,6 +94,6 @@ namespace AgencyBanking.Entities
             }
 
             return (r > 0);
-        }       
+        }      
     }
 }

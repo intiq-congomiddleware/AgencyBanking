@@ -31,4 +31,3 @@ C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\CashWithdrawalPlu
 C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\CashWithdrawalPlusChrg\obj\Debug\netcoreapp2.1\CashWithdrawalPlusChrg.csproj.CopyComplete
 C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\CashWithdrawalPlusChrg\obj\Debug\netcoreapp2.1\CashWithdrawalPlusChrg.dll
 C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\CashWithdrawalPlusChrg\obj\Debug\netcoreapp2.1\CashWithdrawalPlusChrg.pdb
-C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\CashWithdrawalPlusChrg\obj\Debug\netcoreapp2.1\CashWithdrawalPlusChrg.csprojAssemblyReference.cache

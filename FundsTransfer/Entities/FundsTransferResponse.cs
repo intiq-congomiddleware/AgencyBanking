@@ -14,7 +14,7 @@ namespace FundsTransfer.Entities
         public string actualtrnamt { get; set; }
         [JsonIgnore]
         public string rate { get; set; }
-        [JsonIgnore]
+        //[JsonIgnore]
         public string trnrefno { get; set; }
         [JsonIgnore]
         public string id { get; set; }
