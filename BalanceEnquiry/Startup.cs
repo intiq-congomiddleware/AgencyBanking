@@ -75,6 +75,7 @@ namespace BalanceEnquiry
 
             //Validators
             services.AddScoped<IValidator<BalanceEnquiryRequest>, BalanceEnquiryRequestValidator>();
+            services.AddScoped<LogToDB>();
 
             //Oracle  Repositories
             services.AddScoped<IBalanceEnquiryRepository, BalanceEnquiryRepository>();

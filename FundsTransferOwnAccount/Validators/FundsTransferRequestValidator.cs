@@ -1,5 +1,6 @@
 ﻿using AgencyBanking.Entities;
 using FluentValidation;
+using FundsTransfer.Entities;
 using FundsTransfer.Models;
 using FundsTransferOwnAccount.Validators;
 using System;
@@ -11,10 +12,11 @@ namespace FundsTransfer.Validators
 {
     public class FundsTransferRequestValidator : AbstractValidator<Request>
     {
-        private readonly AppSettings settings;
-        public FundsTransferRequestValidator(AppSettings _settings)
+        private readonly IFundsTransferRepository _orclRepo;
+
+        public FundsTransferRequestValidator(IFundsTransferRepository orclRepo)
         {
-            settings = _settings;
+            _orclRepo = orclRepo;
             RuleFor(req => req.debitAccount)
                   .NotNull()
                   .NotEmpty()
@@ -39,7 +41,7 @@ namespace FundsTransfer.Validators
                  .NotNull()
                  .NotEmpty()
                  .MaximumLength(100)
-                 .SetValidator(new RequestIdValidator(settings));
+                 .SetValidator(new RequestIdValidator(_orclRepo));
 
             RuleFor(req => req.branchCode)
                   .NotNull()

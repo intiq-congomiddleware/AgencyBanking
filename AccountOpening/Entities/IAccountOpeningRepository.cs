@@ -10,6 +10,7 @@ namespace AccountOpening.Entities
     {
         Task<Response> OpenAccount(AccountOpeningRequest request);
         AccountOpeningRequest GetAccountOpeningRequest(Request r);
+        bool isDuplicateID(string idString);
         string EncData(string value);
     }
 }

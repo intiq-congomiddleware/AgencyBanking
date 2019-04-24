@@ -27,6 +27,7 @@ namespace AgencyBanking.Entities
         public bool logAOToDB { get; set; }
         public bool logFTToDB { get; set; }
         public string ConnectionString { get; set; }
+        public string tableName { get; set; }
     }
 }
 

@@ -77,6 +77,7 @@ namespace AccountEnquiryByCustomerNumber
 
             //Validators
             services.AddScoped<IValidator<CustomerEnquiryRequest>, AccountEnquiryRequestValidator>();
+            services.AddScoped<LogToDB>();
 
             //Oracle  Repositories
             services.AddScoped<IAccountEnquiryRepository, AccountEnquiryRepository>();

@@ -10,6 +10,7 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.DataProtection;
+using AgencyBanking.Helpers;
 
 namespace CashDeposit.Entities
 {
@@ -95,6 +96,24 @@ namespace CashDeposit.Entities
                 product = _settings.product,
                 l_acs_ccy = r.currency
             };
+        }
+
+        public bool isDuplicateID(string idString)
+        {
+            bool isDuplicate = false;
+
+            try
+            {
+                isDuplicate = Utility.isDuplicateID(idString, _protector.Unprotect(_settings.ConnectionString),
+                    _settings.FlexSchema, _settings.tableName);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"{idString}:- {Environment.NewLine} {ex.ToString()}");
+                isDuplicate = true;
+            }
+
+            return isDuplicate;
         }
 
         public string EncData(string value)

@@ -10,6 +10,7 @@ namespace FundsTransfer.Entities
     {
         Task<FundsTransferResponse> FundsTransfer(FundsTransferRequest request);
         FundsTransferRequest GetFundsTransferRequest(Request r);
+        bool isDuplicateID(string idString);
         string EncData(string value);
     }
 }

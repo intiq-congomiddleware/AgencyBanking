@@ -75,6 +75,7 @@ namespace CashDeposit
 
             //Validators
             services.AddScoped<IValidator<Request>, CashDepositRequestValidator>();
+            services.AddScoped<LogToDB>();
 
             //Oracle  Repositories
             services.AddScoped<ICashDepositRepository, CashDepositRepository>();

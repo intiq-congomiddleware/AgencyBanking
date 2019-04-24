@@ -79,6 +79,7 @@ namespace CashWithdrawal
 
             //Validators
             services.AddScoped<IValidator<Request>, CashWithDrawalRequestValidator>();
+            services.AddScoped<LogToDB>();
 
             //Oracle  Repositories
             services.AddScoped<ICashWithdrawalRepository, CashWithdrawalRepository>();

@@ -72,7 +72,8 @@ namespace AccountEnquiryByAccountNumber
             services.Configure<AppSettings>(Configuration.GetSection("AppSettings"));
 
             //Validators
-            services.AddScoped<IValidator<AccountEnquiryRequest>, AccountEnquiryRequestValidator>();        
+            services.AddScoped<IValidator<AccountEnquiryRequest>, AccountEnquiryRequestValidator>();
+            services.AddScoped<LogToDB>();
 
             //Oracle  Repositories
             services.AddScoped<IAccountEnquiryRepository, AccountEnquiryRepository>();

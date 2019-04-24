@@ -10,6 +10,7 @@ namespace CashWithdrawal.Entities
     {
         Task<FundsTransferResponse> CashWithdrawal(CashWithdrawalRequest request);
         CashWithdrawalRequest GetCashWithdrawalRequest(Request r);
+        bool isDuplicateID(string idString);
         string EncData(string value);
     }
 }

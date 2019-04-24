@@ -1,5 +1,6 @@
 ﻿using AccountOpening.Models;
 using AgencyBanking.Entities;
+using AgencyBanking.Helpers;
 using Microsoft.AspNetCore.DataProtection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
@@ -119,6 +120,24 @@ namespace AccountOpening.Entities
                 customerNumber = r.customeR_NO,
                 message = r.message
             };
+        }
+
+        public bool isDuplicateID(string idString)
+        {
+            bool isDuplicate = false;
+
+            try
+            {
+                isDuplicate = Utility.isDuplicateID(idString, _protector.Unprotect(_settings.ConnectionString),
+                    _settings.FlexSchema, _settings.tableName);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"{idString}:- {Environment.NewLine} {ex.ToString()}");
+                isDuplicate = true;
+            }
+
+            return isDuplicate;
         }
 
         public string EncData(string value)

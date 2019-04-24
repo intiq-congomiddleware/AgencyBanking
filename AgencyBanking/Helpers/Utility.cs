@@ -99,5 +99,23 @@ namespace AgencyBanking.Helpers
 
             return r;
         }
+
+        public static bool isDuplicateID(string requestId, string connection, string schema, string tableName)
+        {
+            bool r = false;
+            var oralConnect = new OracleConnection(connection);
+            using (oralConnect)
+            {
+                string queryAccount = $@"SELECT * FROM {schema}.{tableName} WHERE requestId = :requestId";
+
+                oralConnect.Open();
+
+                var res = oralConnect.Query<string>(queryAccount, new { requestId });
+
+                r = res != null && res.Count() > 0;
+            }
+
+            return r;
+        }
     }
 }

@@ -11,6 +11,7 @@ namespace CashDeposit.Entities
     {
         Task<FundsTransferResponse> CashDeposit(CashDepositRequest request);
         CashDepositRequest GetCashDepositRequest(Request r);
+        bool isDuplicateID(string idString);
         string EncData(string value);
     }
 }

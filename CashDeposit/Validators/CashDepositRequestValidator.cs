@@ -6,15 +6,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AgencyBanking.Entities;
+using Microsoft.Extensions.Options;
+using Microsoft.Extensions.Logging;
 
 namespace CashDeposit.Validators
 {
     public class CashDepositRequestValidator : AbstractValidator<Request>
     {
-        private readonly AppSettings settings;
-        public CashDepositRequestValidator(AppSettings _settings)
+        private readonly ICashDepositRepository _orclRepo;
+
+        public CashDepositRequestValidator(ICashDepositRepository orclRepo)
         {
-            settings = _settings;
+            _orclRepo = orclRepo;
             RuleFor(req => req.creditAccount)
                     .NotNull()
                     .NotEmpty()
@@ -44,7 +47,7 @@ namespace CashDeposit.Validators
                   .NotNull()
                   .NotEmpty()
                   .MaximumLength(100)
-                  .SetValidator(new RequestIdValidator(settings));
+                  .SetValidator(new RequestIdValidator(_orclRepo));
 
             RuleFor(req => req.debitAccount)
                    .NotNull()

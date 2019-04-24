@@ -11,10 +11,11 @@ namespace CashWithdrawal.Validators
 {
     public class CashWithDrawalRequestValidator : AbstractValidator<Request>
     {
-        private readonly AppSettings settings;
-        public CashWithDrawalRequestValidator(AppSettings _settings)
+        private readonly ICashWithdrawalRepository _orclRepo;
+
+        public CashWithDrawalRequestValidator(ICashWithdrawalRepository orclRepo)
         {
-            settings = _settings;
+            _orclRepo = orclRepo;
             RuleFor(req => req.debitAccount)
                    .NotNull()
                    .NotEmpty()
@@ -44,7 +45,7 @@ namespace CashWithdrawal.Validators
                   .NotNull()
                   .NotEmpty()
                   .MaximumLength(100)
-                  .SetValidator(new RequestIdValidator(settings));
+                  .SetValidator(new RequestIdValidator(_orclRepo));
 
             RuleFor(req => req.creditAccount)
                    .NotNull()

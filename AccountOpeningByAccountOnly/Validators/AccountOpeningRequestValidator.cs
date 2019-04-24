@@ -11,10 +11,11 @@ namespace AccountOpening.Validators
 {
     public class AccountOpeningRequestValidator : AbstractValidator<Request>
     {
-        private readonly AppSettings settings;
-        public AccountOpeningRequestValidator(AppSettings _settings)
+        private readonly IAccountOpeningRepository _orclRepo;
+
+        public AccountOpeningRequestValidator(IAccountOpeningRepository orclRepo)
         {
-            settings = _settings;
+            _orclRepo = orclRepo;
             RuleFor(req => req.customerType)
            .NotNull()
            .NotEmpty();
@@ -107,7 +108,7 @@ namespace AccountOpening.Validators
            .NotNull()
            .NotEmpty()
            .MaximumLength(100)
-           .SetValidator(new RequestIdValidator(settings));
+           .SetValidator(new RequestIdValidator(_orclRepo));
         }
     }
 }

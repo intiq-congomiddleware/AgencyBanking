@@ -73,6 +73,7 @@ namespace AccountEnquiryByPhoneNumber
 
             //Validators
             services.AddScoped<IValidator<PhoneEnquiryRequest>, AccountEnquiryRequestValidator>();
+            services.AddScoped<LogToDB>();
 
             //Oracle  Repositories
             services.AddScoped<IAccountEnquiryRepository, AccountEnquiryRepository>();
