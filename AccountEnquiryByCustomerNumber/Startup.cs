@@ -78,6 +78,7 @@ namespace AccountEnquiryByCustomerNumber
             //Validators
             services.AddScoped<IValidator<CustomerEnquiryRequest>, AccountEnquiryRequestValidator>();
             services.AddScoped<LogToDB>();
+            services.AddAntiforgery(opts => opts.HeaderName = Configuration["AppSettings:CSRFHeader"]);
 
             //Oracle  Repositories
             services.AddScoped<IAccountEnquiryRepository, AccountEnquiryRepository>();

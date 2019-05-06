@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using AgencyBanking.Entities;
 using AgencyBanking.Helpers;
 using FundsTransfer.Entities;
+using Microsoft.AspNetCore.Antiforgery;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -14,6 +15,7 @@ namespace FundsTransfer.Controllers
 {
     //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     [EnableCors("AccessAgencyBankingCorsPolicy")]
+    [ValidateAntiForgeryToken]
     [Produces("application/json")]
     [Route("v1/funds")]
     [ApiController]
@@ -21,17 +23,20 @@ namespace FundsTransfer.Controllers
     {
         private readonly ILogger<FundsController> _logger;
         private readonly IFundsTransferRepository _orclRepo;
+        private readonly IAntiforgery _antiforgery;
 
-        public FundsController(ILogger<FundsController> logger, IFundsTransferRepository orclRepo)
+        public FundsController(ILogger<FundsController> logger, IFundsTransferRepository orclRepo
+            , IAntiforgery antiforgery)
         {
             _logger = logger;
             _orclRepo = orclRepo;
+            _antiforgery = antiforgery;
         }
 
         [HttpPost("transfer")]
-        [ProducesResponseType(typeof(FundsTransferResponse), 200)]
-        [ProducesResponseType(typeof(FundsTransferResponse), 400)]
-        [ProducesResponseType(typeof(FundsTransferResponse), 500)]
+        [ProducesResponseType(typeof(Models.Response), 200)]
+        [ProducesResponseType(typeof(Models.Response), 400)]
+        [ProducesResponseType(typeof(Models.Response), 500)]
         public async Task<IActionResult> transfer([FromBody] Models.Request request)
         {
             FundsTransferResponse a = new FundsTransferResponse();
@@ -56,7 +61,20 @@ namespace FundsTransfer.Controllers
                 return StatusCode((int)HttpStatusCode.InternalServerError, Utility.GetResponse(ex));
             }
 
-            return CreatedAtAction("transfer", a);
+            return CreatedAtAction("transfer", new Models.Response { message = a.message, status = a.status });
+        }
+
+        [HttpGet]
+        [IgnoreAntiforgeryToken]
+        public IActionResult Get()
+        {
+            var tokens = _antiforgery.GetAndStoreTokens(HttpContext);
+
+            return new ObjectResult(new
+            {
+                token = tokens.RequestToken,
+                tokenName = tokens.HeaderName
+            });
         }
 
         [HttpGet("encdata/{value}")]

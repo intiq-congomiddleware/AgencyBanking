@@ -5,6 +5,7 @@ using System.Net;
 using System.Threading.Tasks;
 using AgencyBanking.Entities;
 using AgencyBanking.Helpers;
+using Microsoft.AspNetCore.Antiforgery;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -15,6 +16,7 @@ namespace TransactionStatus.Controllers
 {
     //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     [EnableCors("AccessAgencyBankingCorsPolicy")]
+    [ValidateAntiForgeryToken]
     [Produces("application/json")]
     [Route("v1/status")]
     [ApiController]
@@ -23,13 +25,15 @@ namespace TransactionStatus.Controllers
         private readonly ILogger<StatusController> _logger;
         private readonly ITransactionStatusRepository _orclRepo;
         private readonly AppSettings _appSettings;
+        private readonly IAntiforgery _antiforgery;
 
         public StatusController(ILogger<StatusController> logger, ITransactionStatusRepository orclRepo
-            , IOptions<AppSettings> appSettings)
+            , IOptions<AppSettings> appSettings, IAntiforgery antiforgery)
         {
             _logger = logger;
             _orclRepo = orclRepo;
             _appSettings = appSettings.Value;
+            _antiforgery = antiforgery;
         }
 
         [HttpPost("check")]
@@ -70,6 +74,19 @@ namespace TransactionStatus.Controllers
             }
 
             return CreatedAtAction("check", r);
+        }
+
+        [HttpGet]
+        [IgnoreAntiforgeryToken]
+        public IActionResult Get()
+        {
+            var tokens = _antiforgery.GetAndStoreTokens(HttpContext);
+
+            return new ObjectResult(new
+            {
+                token = tokens.RequestToken,
+                tokenName = tokens.HeaderName
+            });
         }
 
         //[HttpGet("encdata/{value}")]

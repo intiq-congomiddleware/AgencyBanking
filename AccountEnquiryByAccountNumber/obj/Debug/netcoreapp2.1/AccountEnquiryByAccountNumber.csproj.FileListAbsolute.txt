@@ -15,6 +15,12 @@ C:\Users\Donald\Documents\Access\CongoMiddleware\Channels\AccountEnquiryByAccoun
 C:\Users\Donald\Documents\Access\CongoMiddleware\Channels\AccountEnquiryByAccountNumber\bin\Debug\netcoreapp2.1\Channels.pdb
 C:\Users\Donald\Documents\Access\CongoMiddleware\Channels\AccountEnquiryByAccountNumber\obj\Debug\netcoreapp2.1\AccountEnquiryByAccountNumber.RazorTargetAssemblyInfo.cache
 C:\Users\Donald\Documents\Access\CongoMiddleware\Channels\AccountEnquiryByAccountNumber\obj\Debug\netcoreapp2.1\AccountEnquiryByAccountNumber.csproj.CopyComplete
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AccountEnquiryByAccountNumber\obj\Debug\netcoreapp2.1\AccountEnquiryByAccountNumber.csprojAssemblyReference.cache
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AccountEnquiryByAccountNumber\obj\Debug\netcoreapp2.1\AccountEnquiryByAccountNumber.csproj.CoreCompileInputs.cache
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AccountEnquiryByAccountNumber\obj\Debug\netcoreapp2.1\AccountEnquiryByAccountNumber.RazorAssemblyInfo.cache
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AccountEnquiryByAccountNumber\obj\Debug\netcoreapp2.1\AccountEnquiryByAccountNumber.RazorAssemblyInfo.cs
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AccountEnquiryByAccountNumber\obj\Debug\netcoreapp2.1\AccountEnquiryByAccountNumber.AssemblyInfoInputs.cache
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AccountEnquiryByAccountNumber\obj\Debug\netcoreapp2.1\AccountEnquiryByAccountNumber.AssemblyInfo.cs
 C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AccountEnquiryByAccountNumber\bin\Debug\netcoreapp2.1\AccountEnquiryByAccountNumber.deps.json
 C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AccountEnquiryByAccountNumber\bin\Debug\netcoreapp2.1\AccountEnquiryByAccountNumber.runtimeconfig.json
 C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AccountEnquiryByAccountNumber\bin\Debug\netcoreapp2.1\AccountEnquiryByAccountNumber.runtimeconfig.dev.json
@@ -22,12 +28,6 @@ C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AccountEnquiryByA
 C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AccountEnquiryByAccountNumber\bin\Debug\netcoreapp2.1\AccountEnquiryByAccountNumber.pdb
 C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AccountEnquiryByAccountNumber\bin\Debug\netcoreapp2.1\AgencyBanking.dll
 C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AccountEnquiryByAccountNumber\bin\Debug\netcoreapp2.1\AgencyBanking.pdb
-C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AccountEnquiryByAccountNumber\obj\Debug\netcoreapp2.1\AccountEnquiryByAccountNumber.csprojAssemblyReference.cache
-C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AccountEnquiryByAccountNumber\obj\Debug\netcoreapp2.1\AccountEnquiryByAccountNumber.csproj.CoreCompileInputs.cache
-C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AccountEnquiryByAccountNumber\obj\Debug\netcoreapp2.1\AccountEnquiryByAccountNumber.RazorAssemblyInfo.cache
-C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AccountEnquiryByAccountNumber\obj\Debug\netcoreapp2.1\AccountEnquiryByAccountNumber.RazorAssemblyInfo.cs
-C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AccountEnquiryByAccountNumber\obj\Debug\netcoreapp2.1\AccountEnquiryByAccountNumber.AssemblyInfoInputs.cache
-C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AccountEnquiryByAccountNumber\obj\Debug\netcoreapp2.1\AccountEnquiryByAccountNumber.AssemblyInfo.cs
 C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AccountEnquiryByAccountNumber\obj\Debug\netcoreapp2.1\AccountEnquiryByAccountNumber.RazorTargetAssemblyInfo.cache
 C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AccountEnquiryByAccountNumber\obj\Debug\netcoreapp2.1\AccountEnquiryByAccountNumber.csproj.CopyComplete
 C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AccountEnquiryByAccountNumber\obj\Debug\netcoreapp2.1\AccountEnquiryByAccountNumber.dll

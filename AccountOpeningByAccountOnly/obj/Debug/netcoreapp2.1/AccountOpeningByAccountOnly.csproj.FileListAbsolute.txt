@@ -22,7 +22,6 @@ C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AccountOpeningByA
 C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AccountOpeningByAccountOnly\bin\Debug\netcoreapp2.1\AccountOpeningByAccountOnly.pdb
 C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AccountOpeningByAccountOnly\bin\Debug\netcoreapp2.1\AgencyBanking.dll
 C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AccountOpeningByAccountOnly\bin\Debug\netcoreapp2.1\AgencyBanking.pdb
-C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AccountOpeningByAccountOnly\obj\Debug\netcoreapp2.1\AccountOpeningByAccountOnly.csprojAssemblyReference.cache
 C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AccountOpeningByAccountOnly\obj\Debug\netcoreapp2.1\AccountOpeningByAccountOnly.csproj.CoreCompileInputs.cache
 C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AccountOpeningByAccountOnly\obj\Debug\netcoreapp2.1\AccountOpeningByAccountOnly.RazorAssemblyInfo.cache
 C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AccountOpeningByAccountOnly\obj\Debug\netcoreapp2.1\AccountOpeningByAccountOnly.RazorAssemblyInfo.cs

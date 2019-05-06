@@ -31,3 +31,4 @@ C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AccountOpening\ob
 C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AccountOpening\obj\Debug\netcoreapp2.1\AccountOpening.csproj.CopyComplete
 C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AccountOpening\obj\Debug\netcoreapp2.1\AccountOpening.dll
 C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AccountOpening\obj\Debug\netcoreapp2.1\AccountOpening.pdb
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AccountOpening\obj\Debug\netcoreapp2.1\AccountOpening.csprojAssemblyReference.cache

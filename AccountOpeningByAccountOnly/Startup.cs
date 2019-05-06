@@ -80,6 +80,7 @@ namespace AccountOpeningByAccountOnly
             //Validators
             services.AddScoped<IValidator<Request>, AccountOpeningRequestValidator>();
             services.AddScoped<LogToDB>();
+            services.AddAntiforgery(opts => opts.HeaderName = Configuration["AppSettings:CSRFHeader"]);
 
             //Oracle  Repositories
             services.AddScoped<IAccountOpeningRepository, AccountOpeningRepository>();

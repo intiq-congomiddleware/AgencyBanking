@@ -10,13 +10,9 @@ namespace CashWithdrawal.Entities
     {
         public string status { get; set; }
         public string message { get; set; }
-        [JsonIgnore]
         public string actualtrnamt { get; set; }
-        [JsonIgnore]
         public string rate { get; set; }
-        //[JsonIgnore]
         public string trnrefno { get; set; }
-        [JsonIgnore]
         public string id { get; set; }
     }
 }

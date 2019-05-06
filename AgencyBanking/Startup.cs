@@ -26,7 +26,7 @@ namespace AgencyBanking
         public void ConfigureServices(IServiceCollection services)
         {
             //services.AddScoped<LogToDB>();
-
+            services.AddAntiforgery(opts => opts.HeaderName = "X-XSRF-Token");
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 

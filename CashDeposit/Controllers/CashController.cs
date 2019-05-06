@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using AgencyBanking.Entities;
 using AgencyBanking.Helpers;
 using CashDeposit.Entities;
+using Microsoft.AspNetCore.Antiforgery;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -14,6 +15,7 @@ namespace CashDeposit.Controllers
 {
     //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     [EnableCors("AccessAgencyBankingCorsPolicy")]
+    [ValidateAntiForgeryToken]
     [Produces("application/json")]
     [Route("v1/cash")]
     [ApiController]
@@ -21,17 +23,20 @@ namespace CashDeposit.Controllers
     {
         private readonly ILogger<CashController> _logger;
         private readonly ICashDepositRepository _orclRepo;
+        private readonly IAntiforgery _antiforgery;
 
-        public CashController(ILogger<CashController> logger, ICashDepositRepository orclRepo)
+        public CashController(ILogger<CashController> logger, ICashDepositRepository orclRepo
+            , IAntiforgery antiforgery)
         {
             _logger = logger;
             _orclRepo = orclRepo;
+            _antiforgery = antiforgery;
         }
 
         [HttpPost("deposit")]
-        [ProducesResponseType(typeof(FundsTransferResponse), 200)]
-        [ProducesResponseType(typeof(Response), 400)]
-        [ProducesResponseType(typeof(Response), 500)]
+        [ProducesResponseType(typeof(Models.Response), 200)]
+        [ProducesResponseType(typeof(Models.Response), 400)]
+        [ProducesResponseType(typeof(Models.Response), 500)]
         public async Task<IActionResult> deposit([FromBody] Models.Request request)
         {
             FundsTransferResponse a = new FundsTransferResponse();
@@ -56,7 +61,20 @@ namespace CashDeposit.Controllers
                 return StatusCode((int)HttpStatusCode.InternalServerError, Utility.GetResponse(ex));
             }
 
-            return CreatedAtAction("deposit", a);
+            return CreatedAtAction("deposit", new Models.Response {  message = a.message, status = a.status });
+        }
+
+        [HttpGet]
+        [IgnoreAntiforgeryToken]
+        public IActionResult Get()
+        {
+            var tokens = _antiforgery.GetAndStoreTokens(HttpContext);
+
+            return new ObjectResult(new
+            {
+                token = tokens.RequestToken,
+                tokenName = tokens.HeaderName
+            });
         }
 
         [HttpGet("encdata/{value}")]

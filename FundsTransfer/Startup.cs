@@ -84,7 +84,7 @@ namespace FundsTransfer
             services.AddScoped<IFundsTransferRepository, FundsTransferRepository>();
 
             services.AddScoped<LogToDB>();
-
+            services.AddAntiforgery(opts => opts.HeaderName = Configuration["AppSettings:CSRFHeader"]);
             services.AddMvc().AddFluentValidation(fvc => { }).SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 

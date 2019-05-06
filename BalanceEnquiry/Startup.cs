@@ -76,6 +76,7 @@ namespace BalanceEnquiry
             //Validators
             services.AddScoped<IValidator<BalanceEnquiryRequest>, BalanceEnquiryRequestValidator>();
             services.AddScoped<LogToDB>();
+            services.AddAntiforgery(opts => opts.HeaderName = Configuration["AppSettings:CSRFHeader"]);
 
             //Oracle  Repositories
             services.AddScoped<IBalanceEnquiryRepository, BalanceEnquiryRepository>();

@@ -76,6 +76,7 @@ namespace CashDeposit
             //Validators
             services.AddScoped<IValidator<Request>, CashDepositRequestValidator>();
             services.AddScoped<LogToDB>();
+            services.AddAntiforgery(opts => opts.HeaderName = Configuration["AppSettings:CSRFHeader"]);
 
             //Oracle  Repositories
             services.AddScoped<ICashDepositRepository, CashDepositRepository>();

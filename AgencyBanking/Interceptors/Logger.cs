@@ -1,4 +1,5 @@
 ﻿using AgencyBanking.Entities;
+using Microsoft.AspNetCore.Antiforgery;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.DataProtection;
 using Microsoft.AspNetCore.Http;
@@ -25,16 +26,17 @@ namespace AgencyBanking.Interceptors
         private readonly RequestDelegate _next;
         IOptions<AppSettings> _settings;
         private readonly ILogger<Logger> _logger;
-        private IDataProtector _protector;
         private LogToDB _logToDB;
+        private readonly IAntiforgery _antiforgery;
 
         public Logger(RequestDelegate next, ILogger<Logger> logger
-            , IOptions<AppSettings> settings, LogToDB logToDB)
+            , IOptions<AppSettings> settings, LogToDB logToDB, IAntiforgery antiforgery)
         {
             _next = next;
             _settings = settings;
             _logger = logger;
             _logToDB = logToDB;
+            _antiforgery = antiforgery;
         }
 
         public async Task Invoke(HttpContext context)
@@ -65,12 +67,12 @@ namespace AgencyBanking.Interceptors
                 var responseText = await FormatResponse(context.Response);
                 var timestamp = DateTimeOffset.Now.ToString(Constant.TIMESTAMP_FORMAT_1);
                 var elapsed = $"{stopwatch.ElapsedMilliseconds.ToString().PadLeft(5)}ms";
-                var status = context.Response.StatusCode.ToString();               
+                var status = context.Response.StatusCode.ToString();
 
                 if (_settings.Value.loggerModeOn.Any(path.Contains))
                 {
                     try
-                    {                        
+                    {
                         logValues.Add("Elapsed: " + elapsed);
                         logValues.Add("Method: " + method);
                         logValues.Add("Path: " + path);
@@ -101,7 +103,7 @@ namespace AgencyBanking.Interceptors
                             {
                                 _logger.LogError($"_logToDB.FundsTransferDump:- {ex.ToString()}");
                             }
-                            
+
                         }
 
                         reqId = (!string.IsNullOrEmpty(reqId)) ? reqId : DateTime.Now.ToString(Constant.TIMESTAMP_FORMAT_2);

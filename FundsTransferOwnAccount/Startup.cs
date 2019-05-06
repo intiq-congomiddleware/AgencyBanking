@@ -80,6 +80,7 @@ namespace FundsTransferOwnAccount
             //Validators
             services.AddScoped<IValidator<Request>, FundsTransferRequestValidator>();
             services.AddScoped<LogToDB>();
+            services.AddAntiforgery(opts => opts.HeaderName = Configuration["AppSettings:CSRFHeader"]);
 
             //Oracle  Repositories
             services.AddScoped<IFundsTransferRepository, FundsTransferRepository>();

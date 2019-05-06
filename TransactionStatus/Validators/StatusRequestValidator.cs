@@ -11,15 +11,11 @@ namespace TransactionStatus.Validators
    
     public class StatusRequestValidator : AbstractValidator<StatusRequest>
     {
-        private readonly AppSettings settings;
-        public StatusRequestValidator(AppSettings _settings)
+        public StatusRequestValidator()
         {
-            settings = _settings;
             RuleFor(req => req.requestId)
                     .NotNull()
-                    .NotEmpty()
-                    .MaximumLength(100)
-                    .SetValidator(new RequestIdValidator(settings));
+                    .NotEmpty();
         }
     }
 }

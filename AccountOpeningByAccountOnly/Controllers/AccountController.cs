@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using AccountOpening.Entities;
 using AgencyBanking.Entities;
 using AgencyBanking.Helpers;
+using Microsoft.AspNetCore.Antiforgery;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Cors;
@@ -16,6 +17,7 @@ namespace AccountOpening.Controllers
 {
     //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     [EnableCors("AccessAgencyBankingCorsPolicy")]
+    [ValidateAntiForgeryToken]
     [Produces("application/json")]
     [Route("v1/account")]
     [ApiController]
@@ -23,11 +25,14 @@ namespace AccountOpening.Controllers
     {
         private readonly ILogger<AccountController> _logger;
         private readonly IAccountOpeningRepository _orclRepo;
+        private readonly IAntiforgery _antiforgery;
 
-        public AccountController(ILogger<AccountController> logger, IAccountOpeningRepository orclRepo)
+        public AccountController(ILogger<AccountController> logger, IAccountOpeningRepository orclRepo
+            , IAntiforgery antiforgery)
         {
             _logger = logger;
             _orclRepo = orclRepo;
+            _antiforgery = antiforgery;
         }
 
         [HttpPost("create")]
@@ -59,6 +64,19 @@ namespace AccountOpening.Controllers
             }
 
             return CreatedAtAction("create", a);
+        }
+
+        [HttpGet]
+        [IgnoreAntiforgeryToken]
+        public IActionResult Get()
+        {
+            var tokens = _antiforgery.GetAndStoreTokens(HttpContext);
+
+            return new ObjectResult(new
+            {
+                token = tokens.RequestToken,
+                tokenName = tokens.HeaderName
+            });
         }
 
         [HttpGet("encdata/{value}")]

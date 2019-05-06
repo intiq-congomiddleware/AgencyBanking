@@ -8,11 +8,13 @@ using AccountEnquiry.Entities;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Antiforgery;
 
 namespace AccountEnquiry.Controllers
 {
     //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     [EnableCors("AccessAgencyBankingCorsPolicy")]
+    [ValidateAntiForgeryToken]
     [Produces("application/json")]
     [Route("v1/account")]
     [ApiController]
@@ -20,11 +22,14 @@ namespace AccountEnquiry.Controllers
     {
         private readonly ILogger<AccountController> _logger;
         private readonly IAccountEnquiryRepository _orclRepo;
+        private readonly IAntiforgery _antiforgery;
 
-        public AccountController(ILogger<AccountController> logger, IAccountEnquiryRepository orclRepo)
+        public AccountController(ILogger<AccountController> logger, IAccountEnquiryRepository orclRepo
+            , IAntiforgery antiforgery)
         {
             _logger = logger;
             _orclRepo = orclRepo;
+            _antiforgery = antiforgery;
         }
 
         [HttpPost("enquiry")]
@@ -56,6 +61,19 @@ namespace AccountEnquiry.Controllers
             }
 
             return CreatedAtAction("enquiry", b);
-        }       
+        }
+
+        [HttpGet]
+        [IgnoreAntiforgeryToken]
+        public IActionResult Get()
+        {
+            var tokens = _antiforgery.GetAndStoreTokens(HttpContext);
+
+            return new ObjectResult(new
+            {
+                token = tokens.RequestToken,
+                tokenName = tokens.HeaderName
+            });
+        }
     }
 }

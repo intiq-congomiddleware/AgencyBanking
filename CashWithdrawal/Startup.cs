@@ -80,6 +80,7 @@ namespace CashWithdrawal
             //Validators
             services.AddScoped<IValidator<Request>, CashWithDrawalRequestValidator>();
             services.AddScoped<LogToDB>();
+            services.AddAntiforgery(opts => opts.HeaderName = Configuration["AppSettings:CSRFHeader"]);
 
             //Oracle  Repositories
             services.AddScoped<ICashWithdrawalRepository, CashWithdrawalRepository>();

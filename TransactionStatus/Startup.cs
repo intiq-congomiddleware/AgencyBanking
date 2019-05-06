@@ -41,17 +41,14 @@ namespace TransactionStatus
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            //Add AppSettings
+            services.Configure<AppSettings>(Configuration.GetSection("AppSettings"));
+
             services.AddCors(options =>
             {
                 options.AddPolicy("AccessAgencyBankingCorsPolicy",
-                builder => builder.AllowAnyOrigin()
-                             .AllowAnyMethod()
-                             .AllowAnyHeader()
-                             .AllowCredentials());
+                builder => builder.WithOrigins(Configuration.GetSection("AppSettings:PermittedIPs").Get<string[]>()));                           
             });
-
-            //Add AppSettings
-            services.Configure<AppSettings>(Configuration.GetSection("AppSettings"));
 
             services.AddAuthentication()
               .AddJwtBearer(cfg =>
@@ -83,6 +80,7 @@ namespace TransactionStatus
             //Validators
             services.AddScoped<IValidator<StatusRequest>, StatusRequestValidator>();
             services.AddScoped<LogToDB>();
+            services.AddAntiforgery(opts => opts.HeaderName = Configuration["AppSettings:CSRFHeader"]);
 
             services.AddDataProtection()
                       .PersistKeysToFileSystem(new DirectoryInfo(@"C:\Server\Share\Keys\"));

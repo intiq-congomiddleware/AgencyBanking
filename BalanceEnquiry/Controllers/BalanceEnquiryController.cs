@@ -9,11 +9,13 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using BalanceEnquiry.Entities;
 using System.Net;
+using Microsoft.AspNetCore.Antiforgery;
 
 namespace BalanceEnquiry.Controllers
 {
     //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     [EnableCors("AccessAgencyBankingCorsPolicy")]
+    [ValidateAntiForgeryToken]
     [Produces("application/json")]
     [Route("v1/balance")]
     [ApiController]
@@ -21,11 +23,14 @@ namespace BalanceEnquiry.Controllers
     {
         private readonly ILogger<BalanceEnquiryController> _logger;
         private readonly IBalanceEnquiryRepository _orclRepo;
+        private readonly IAntiforgery _antiforgery;
 
-        public BalanceEnquiryController(ILogger<BalanceEnquiryController> logger, IBalanceEnquiryRepository orclRepo)
+        public BalanceEnquiryController(ILogger<BalanceEnquiryController> logger, IBalanceEnquiryRepository orclRepo
+            , IAntiforgery antiforgery)
         {
             _logger = logger;
             _orclRepo = orclRepo;
+            _antiforgery = antiforgery;
         }
 
         [HttpPost("enquiry")]
@@ -54,6 +59,19 @@ namespace BalanceEnquiry.Controllers
                 Console.WriteLine(ex.ToString());
             }
             return CreatedAtAction("enquiry", br);
+        }
+
+        [HttpGet]
+        [IgnoreAntiforgeryToken]
+        public IActionResult Get()
+        {
+            var tokens = _antiforgery.GetAndStoreTokens(HttpContext);
+
+            return new ObjectResult(new
+            {
+                token = tokens.RequestToken,
+                tokenName = tokens.HeaderName
+            });
         }
     }
 }
