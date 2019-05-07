@@ -67,7 +67,7 @@ namespace AgencyBanking.Entities
 
             LogFundsTransfer a = new LogFundsTransfer()
             {
-                actualTrnAmt = res.actualtrnamt,
+                actualTrnAmt = res.actualTrnAmt,
                 amount = req.amount,
                 branchCode = req.branchCode,
                 creditAccount = req.creditAccount,
@@ -77,7 +77,7 @@ namespace AgencyBanking.Entities
                 product = _appSettings.product,
                 requestId = req.requestId,
                 status = res.status,
-                trnRefNo = res.trnrefno,
+                trnRefNo = res.trnRefNo,
                 userName = req.userName
             };
 
@@ -85,8 +85,8 @@ namespace AgencyBanking.Entities
             var oralConnect = new OracleConnection(_protector.Unprotect(_appSettings.ConnectionString));
             using (oralConnect)
             {
-                string queryAccount = $@"INSERT INTO FUNDSTRANSFERS (requestId, debitAccount, creditAccount, product, amount, narration, userName, branchCode, status, message, actualTrnAmt, rate, trnRefNo, userName)
-                                            VALUES (:requestId, :debitAccount, :creditAccount, :product, :amount, :narration, :userName, :branchCode, :status, :message, :actualTrnAmt, :rate, :trnRefNo, :userName)";
+                string queryAccount = $@"INSERT INTO FUNDSTRANSFERS (requestId, debitAccount, creditAccount, product, amount, narration, userName, branchCode, status, message, actualTrnAmt, rate, trnRefNo)
+                                            VALUES (:requestId, :debitAccount, :creditAccount, :product, :amount, :narration, :userName, :branchCode, :status, :message, :actualTrnAmt, :rate, :trnRefNo)";
 
                 oralConnect.Open();
 

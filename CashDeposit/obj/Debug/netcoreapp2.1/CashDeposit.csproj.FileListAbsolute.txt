@@ -22,7 +22,6 @@ C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\CashDeposit\bin\D
 C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\CashDeposit\bin\Debug\netcoreapp2.1\CashDeposit.pdb
 C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\CashDeposit\bin\Debug\netcoreapp2.1\AgencyBanking.dll
 C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\CashDeposit\bin\Debug\netcoreapp2.1\AgencyBanking.pdb
-C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\CashDeposit\obj\Debug\netcoreapp2.1\CashDeposit.csprojAssemblyReference.cache
 C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\CashDeposit\obj\Debug\netcoreapp2.1\CashDeposit.csproj.CoreCompileInputs.cache
 C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\CashDeposit\obj\Debug\netcoreapp2.1\CashDeposit.RazorAssemblyInfo.cache
 C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\CashDeposit\obj\Debug\netcoreapp2.1\CashDeposit.RazorAssemblyInfo.cs

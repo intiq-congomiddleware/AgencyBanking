@@ -12,5 +12,6 @@ namespace CashWithdrawal.Entities
         CashWithdrawalRequest GetCashWithdrawalRequest(Request r);
         bool isDuplicateID(string idString);
         string EncData(string value);
+        Models.Response GetFTResponse(FundsTransferResponse r);
     }
 }

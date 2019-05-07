@@ -62,7 +62,7 @@ namespace CashWithdrawal.Controllers
                 return StatusCode((int)HttpStatusCode.InternalServerError, Utility.GetResponse(ex));
             }
 
-            return CreatedAtAction("withdrawalpluscharges", new Models.Response { message = a.message, status = a.status });
+            return CreatedAtAction("withdrawalpluscharges", _orclRepo.GetFTResponse(a));
         }
 
         [HttpGet]

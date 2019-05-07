@@ -22,6 +22,7 @@ C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\BalanceEnquiry\bi
 C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\BalanceEnquiry\bin\Debug\netcoreapp2.1\BalanceEnquiry.pdb
 C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\BalanceEnquiry\bin\Debug\netcoreapp2.1\AgencyBanking.dll
 C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\BalanceEnquiry\bin\Debug\netcoreapp2.1\AgencyBanking.pdb
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\BalanceEnquiry\obj\Debug\netcoreapp2.1\BalanceEnquiry.csprojAssemblyReference.cache
 C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\BalanceEnquiry\obj\Debug\netcoreapp2.1\BalanceEnquiry.csproj.CoreCompileInputs.cache
 C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\BalanceEnquiry\obj\Debug\netcoreapp2.1\BalanceEnquiry.RazorAssemblyInfo.cache
 C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\BalanceEnquiry\obj\Debug\netcoreapp2.1\BalanceEnquiry.RazorAssemblyInfo.cs

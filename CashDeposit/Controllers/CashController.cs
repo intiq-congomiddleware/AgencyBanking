@@ -61,7 +61,7 @@ namespace CashDeposit.Controllers
                 return StatusCode((int)HttpStatusCode.InternalServerError, Utility.GetResponse(ex));
             }
 
-            return CreatedAtAction("deposit", new Models.Response {  message = a.message, status = a.status });
+            return CreatedAtAction("deposit", _orclRepo.GetFTResponse(a));
         }
 
         [HttpGet]

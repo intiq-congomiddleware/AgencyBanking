@@ -126,6 +126,17 @@ namespace CashWithdrawal.Entities
             };
         }
 
+        public Models.Response GetFTResponse(FundsTransferResponse r)
+        {
+            return new Models.Response()
+            {
+                actualTrnAmt = r.actualtrnamt,
+                message = r.message,
+                rate = r.rate,
+                status = r.status,
+                trnRefNo = r.status
+            };
+        }
         public bool isDuplicateID(string idString)
         {
             bool isDuplicate = false;

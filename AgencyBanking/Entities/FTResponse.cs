@@ -9,9 +9,9 @@ namespace AgencyBanking.Entities
     {
         public string status { get; set; }
         public string message { get; set; }
-        public string actualtrnamt { get; set; }
+        public string actualTrnAmt { get; set; }
         public string rate { get; set; }
-        public string trnrefno { get; set; }
+        public string trnRefNo { get; set; }
         public string id { get; set; }
     }
 }

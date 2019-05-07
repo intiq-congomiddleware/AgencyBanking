@@ -61,7 +61,7 @@ namespace FundsTransfer.Controllers
                 return StatusCode((int)HttpStatusCode.InternalServerError, Utility.GetResponse(ex));
             }
 
-            return CreatedAtAction("transfer", new Models.Response { message = a.message, status = a.status });
+            return CreatedAtAction("transfer", _orclRepo.GetFTResponse(a));
         }
 
         [HttpGet]

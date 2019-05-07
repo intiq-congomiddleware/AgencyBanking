@@ -13,5 +13,6 @@ namespace CashDeposit.Entities
         CashDepositRequest GetCashDepositRequest(Request r);
         bool isDuplicateID(string idString);
         string EncData(string value);
+        Models.Response GetFTResponse(FundsTransferResponse r);
     }
 }
