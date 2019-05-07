@@ -89,7 +89,8 @@ namespace TransactionStatus.Controllers
             });
         }
 
-        //[HttpGet("encdata/{value}")]
+        [HttpGet("encdata/{value}")]
+        [IgnoreAntiforgeryToken]
         [ProducesResponseType(typeof(string), 200)]
         [ProducesResponseType(typeof(Response), 400)]
         [ProducesResponseType(typeof(Response), 500)]

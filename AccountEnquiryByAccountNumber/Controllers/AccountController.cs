@@ -14,7 +14,7 @@ namespace AccountEnquiry.Controllers
 {
     //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     [EnableCors("AccessAgencyBankingCorsPolicy")]
-    [ValidateAntiForgeryToken]
+    //[ValidateAntiForgeryToken]
     [Produces("application/json")]
     [Route("v1/account")]
     [ApiController]

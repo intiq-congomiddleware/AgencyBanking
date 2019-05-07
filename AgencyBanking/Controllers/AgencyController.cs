@@ -22,7 +22,7 @@ namespace AgencyBanking.Controllers
         }
 
 
-        //[HttpGet]
+        [HttpGet]
         [IgnoreAntiforgeryToken]
         public IActionResult Get()
         {
