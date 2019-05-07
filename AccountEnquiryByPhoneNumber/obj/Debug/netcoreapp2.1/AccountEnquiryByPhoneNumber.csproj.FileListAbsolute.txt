@@ -31,4 +31,3 @@ C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AccountEnquiryByP
 C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AccountEnquiryByPhoneNumber\obj\Debug\netcoreapp2.1\AccountEnquiryByPhoneNumber.csproj.CopyComplete
 C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AccountEnquiryByPhoneNumber\obj\Debug\netcoreapp2.1\AccountEnquiryByPhoneNumber.dll
 C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AccountEnquiryByPhoneNumber\obj\Debug\netcoreapp2.1\AccountEnquiryByPhoneNumber.pdb
-C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AccountEnquiryByPhoneNumber\obj\Debug\netcoreapp2.1\AccountEnquiryByPhoneNumber.csprojAssemblyReference.cache

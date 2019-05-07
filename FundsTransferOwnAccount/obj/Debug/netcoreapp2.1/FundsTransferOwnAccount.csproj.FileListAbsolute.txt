@@ -15,11 +15,6 @@ C:\Users\Donald\Documents\Access\CongoMiddleware\Channels\FundsTransferOwnAccoun
 C:\Users\Donald\Documents\Access\CongoMiddleware\Channels\FundsTransferOwnAccount\obj\Debug\netcoreapp2.1\FundsTransferOwnAccount.csproj.CopyComplete
 C:\Users\Donald\Documents\Access\CongoMiddleware\Channels\FundsTransferOwnAccount\obj\Debug\netcoreapp2.1\FundsTransferOwnAccount.dll
 C:\Users\Donald\Documents\Access\CongoMiddleware\Channels\FundsTransferOwnAccount\obj\Debug\netcoreapp2.1\FundsTransferOwnAccount.pdb
-C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\FundsTransferOwnAccount\obj\Debug\netcoreapp2.1\FundsTransferOwnAccount.csproj.CoreCompileInputs.cache
-C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\FundsTransferOwnAccount\obj\Debug\netcoreapp2.1\FundsTransferOwnAccount.RazorAssemblyInfo.cache
-C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\FundsTransferOwnAccount\obj\Debug\netcoreapp2.1\FundsTransferOwnAccount.RazorAssemblyInfo.cs
-C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\FundsTransferOwnAccount\obj\Debug\netcoreapp2.1\FundsTransferOwnAccount.AssemblyInfoInputs.cache
-C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\FundsTransferOwnAccount\obj\Debug\netcoreapp2.1\FundsTransferOwnAccount.AssemblyInfo.cs
 C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\FundsTransferOwnAccount\bin\Debug\netcoreapp2.1\FundsTransferOwnAccount.deps.json
 C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\FundsTransferOwnAccount\bin\Debug\netcoreapp2.1\FundsTransferOwnAccount.runtimeconfig.json
 C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\FundsTransferOwnAccount\bin\Debug\netcoreapp2.1\FundsTransferOwnAccount.runtimeconfig.dev.json
@@ -27,6 +22,11 @@ C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\FundsTransferOwnA
 C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\FundsTransferOwnAccount\bin\Debug\netcoreapp2.1\FundsTransferOwnAccount.pdb
 C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\FundsTransferOwnAccount\bin\Debug\netcoreapp2.1\AgencyBanking.dll
 C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\FundsTransferOwnAccount\bin\Debug\netcoreapp2.1\AgencyBanking.pdb
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\FundsTransferOwnAccount\obj\Debug\netcoreapp2.1\FundsTransferOwnAccount.csproj.CoreCompileInputs.cache
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\FundsTransferOwnAccount\obj\Debug\netcoreapp2.1\FundsTransferOwnAccount.RazorAssemblyInfo.cache
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\FundsTransferOwnAccount\obj\Debug\netcoreapp2.1\FundsTransferOwnAccount.RazorAssemblyInfo.cs
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\FundsTransferOwnAccount\obj\Debug\netcoreapp2.1\FundsTransferOwnAccount.AssemblyInfoInputs.cache
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\FundsTransferOwnAccount\obj\Debug\netcoreapp2.1\FundsTransferOwnAccount.AssemblyInfo.cs
 C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\FundsTransferOwnAccount\obj\Debug\netcoreapp2.1\FundsTransferOwnAccount.RazorTargetAssemblyInfo.cache
 C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\FundsTransferOwnAccount\obj\Debug\netcoreapp2.1\FundsTransferOwnAccount.csproj.CopyComplete
 C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\FundsTransferOwnAccount\obj\Debug\netcoreapp2.1\FundsTransferOwnAccount.dll

@@ -22,6 +22,7 @@ C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AccountEnquiryByA
 C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AccountEnquiryByAccountNumber\bin\Debug\netcoreapp2.1\AccountEnquiryByAccountNumber.pdb
 C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AccountEnquiryByAccountNumber\bin\Debug\netcoreapp2.1\AgencyBanking.dll
 C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AccountEnquiryByAccountNumber\bin\Debug\netcoreapp2.1\AgencyBanking.pdb
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AccountEnquiryByAccountNumber\obj\Debug\netcoreapp2.1\AccountEnquiryByAccountNumber.csprojAssemblyReference.cache
 C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AccountEnquiryByAccountNumber\obj\Debug\netcoreapp2.1\AccountEnquiryByAccountNumber.csproj.CoreCompileInputs.cache
 C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AccountEnquiryByAccountNumber\obj\Debug\netcoreapp2.1\AccountEnquiryByAccountNumber.RazorAssemblyInfo.cache
 C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AccountEnquiryByAccountNumber\obj\Debug\netcoreapp2.1\AccountEnquiryByAccountNumber.RazorAssemblyInfo.cs
