@@ -5,7 +5,6 @@ C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\TransactionStatus
 C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\TransactionStatus\bin\Debug\netcoreapp2.1\TransactionStatus.pdb
 C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\TransactionStatus\bin\Debug\netcoreapp2.1\AgencyBanking.dll
 C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\TransactionStatus\bin\Debug\netcoreapp2.1\AgencyBanking.pdb
-C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\TransactionStatus\obj\Debug\netcoreapp2.1\TransactionStatus.csprojAssemblyReference.cache
 C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\TransactionStatus\obj\Debug\netcoreapp2.1\TransactionStatus.csproj.CoreCompileInputs.cache
 C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\TransactionStatus\obj\Debug\netcoreapp2.1\TransactionStatus.RazorAssemblyInfo.cache
 C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\TransactionStatus\obj\Debug\netcoreapp2.1\TransactionStatus.RazorAssemblyInfo.cs

@@ -105,7 +105,7 @@ namespace FundsTransfer.Entities
                 message = r.message,
                 rate = r.rate,
                 status = r.status,
-                trnRefNo = r.status
+                trnRefNo = r.trnrefno
             };
         }
         public bool isDuplicateID(string idString)
