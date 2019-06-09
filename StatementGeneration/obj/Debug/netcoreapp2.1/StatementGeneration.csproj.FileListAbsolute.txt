@@ -1,0 +1,17 @@
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\StatementGeneration\bin\Debug\netcoreapp2.1\StatementGeneration.deps.json
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\StatementGeneration\bin\Debug\netcoreapp2.1\StatementGeneration.runtimeconfig.json
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\StatementGeneration\bin\Debug\netcoreapp2.1\StatementGeneration.runtimeconfig.dev.json
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\StatementGeneration\bin\Debug\netcoreapp2.1\StatementGeneration.dll
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\StatementGeneration\bin\Debug\netcoreapp2.1\StatementGeneration.pdb
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\StatementGeneration\bin\Debug\netcoreapp2.1\AgencyBanking.dll
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\StatementGeneration\bin\Debug\netcoreapp2.1\AgencyBanking.pdb
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\StatementGeneration\obj\Debug\netcoreapp2.1\StatementGeneration.csprojAssemblyReference.cache
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\StatementGeneration\obj\Debug\netcoreapp2.1\StatementGeneration.csproj.CoreCompileInputs.cache
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\StatementGeneration\obj\Debug\netcoreapp2.1\StatementGeneration.RazorAssemblyInfo.cache
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\StatementGeneration\obj\Debug\netcoreapp2.1\StatementGeneration.RazorAssemblyInfo.cs
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\StatementGeneration\obj\Debug\netcoreapp2.1\StatementGeneration.AssemblyInfoInputs.cache
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\StatementGeneration\obj\Debug\netcoreapp2.1\StatementGeneration.AssemblyInfo.cs
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\StatementGeneration\obj\Debug\netcoreapp2.1\StatementGeneration.RazorTargetAssemblyInfo.cache
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\StatementGeneration\obj\Debug\netcoreapp2.1\StatementGeneration.csproj.CopyComplete
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\StatementGeneration\obj\Debug\netcoreapp2.1\StatementGeneration.dll
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\StatementGeneration\obj\Debug\netcoreapp2.1\StatementGeneration.pdb

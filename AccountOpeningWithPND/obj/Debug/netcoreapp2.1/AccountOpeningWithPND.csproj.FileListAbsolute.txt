@@ -1,0 +1,17 @@
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AccountOpeningWithPND\bin\Debug\netcoreapp2.1\AccountOpeningWithPND.deps.json
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AccountOpeningWithPND\bin\Debug\netcoreapp2.1\AccountOpeningWithPND.runtimeconfig.json
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AccountOpeningWithPND\bin\Debug\netcoreapp2.1\AccountOpeningWithPND.runtimeconfig.dev.json
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AccountOpeningWithPND\bin\Debug\netcoreapp2.1\AccountOpeningWithPND.dll
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AccountOpeningWithPND\bin\Debug\netcoreapp2.1\AccountOpeningWithPND.pdb
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AccountOpeningWithPND\bin\Debug\netcoreapp2.1\AgencyBanking.dll
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AccountOpeningWithPND\bin\Debug\netcoreapp2.1\AgencyBanking.pdb
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AccountOpeningWithPND\obj\Debug\netcoreapp2.1\AccountOpeningWithPND.csprojAssemblyReference.cache
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AccountOpeningWithPND\obj\Debug\netcoreapp2.1\AccountOpeningWithPND.csproj.CoreCompileInputs.cache
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AccountOpeningWithPND\obj\Debug\netcoreapp2.1\AccountOpeningWithPND.RazorAssemblyInfo.cache
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AccountOpeningWithPND\obj\Debug\netcoreapp2.1\AccountOpeningWithPND.RazorAssemblyInfo.cs
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AccountOpeningWithPND\obj\Debug\netcoreapp2.1\AccountOpeningWithPND.AssemblyInfoInputs.cache
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AccountOpeningWithPND\obj\Debug\netcoreapp2.1\AccountOpeningWithPND.AssemblyInfo.cs
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AccountOpeningWithPND\obj\Debug\netcoreapp2.1\AccountOpeningWithPND.RazorTargetAssemblyInfo.cache
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AccountOpeningWithPND\obj\Debug\netcoreapp2.1\AccountOpeningWithPND.csproj.CopyComplete
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AccountOpeningWithPND\obj\Debug\netcoreapp2.1\AccountOpeningWithPND.dll
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AccountOpeningWithPND\obj\Debug\netcoreapp2.1\AccountOpeningWithPND.pdb

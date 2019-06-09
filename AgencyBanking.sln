@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.421
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28917.181
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AccountEnquiryByCustomerNumber", "AccountEnquiryByCustomerNumber\AccountEnquiryByCustomerNumber.csproj", "{7CFFD3E5-AC1F-4D4B-A0F9-C4C5C4D0B0F0}"
 EndProject
@@ -27,7 +27,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FundsTransferOwnAccount", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AgencyBanking", "AgencyBanking\AgencyBanking.csproj", "{7AB412FB-41FC-47E0-8E26-B9159596B6D3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransactionStatus", "TransactionStatus\TransactionStatus.csproj", "{FE5AE467-18E2-47AE-965E-FA9DC5BC0BB1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TransactionStatus", "TransactionStatus\TransactionStatus.csproj", "{FE5AE467-18E2-47AE-965E-FA9DC5BC0BB1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AccountOpeningWithPND", "AccountOpeningWithPND\AccountOpeningWithPND.csproj", "{BA8BB159-9708-49A3-9F10-8DC038D739DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StatementGeneration", "StatementGeneration\StatementGeneration.csproj", "{BE488691-0164-47E3-9474-5456E61630B9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -87,6 +91,14 @@ Global
 		{FE5AE467-18E2-47AE-965E-FA9DC5BC0BB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FE5AE467-18E2-47AE-965E-FA9DC5BC0BB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FE5AE467-18E2-47AE-965E-FA9DC5BC0BB1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA8BB159-9708-49A3-9F10-8DC038D739DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA8BB159-9708-49A3-9F10-8DC038D739DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA8BB159-9708-49A3-9F10-8DC038D739DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA8BB159-9708-49A3-9F10-8DC038D739DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE488691-0164-47E3-9474-5456E61630B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE488691-0164-47E3-9474-5456E61630B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE488691-0164-47E3-9474-5456E61630B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE488691-0164-47E3-9474-5456E61630B9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

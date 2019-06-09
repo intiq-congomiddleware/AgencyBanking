@@ -28,6 +28,8 @@ namespace AgencyBanking.Entities
         public bool logFTToDB { get; set; }
         public string ConnectionString { get; set; }
         public string tableName { get; set; }
+        public string UserID { get; set; }
+        public int Duration { get; set; }
     }
 }
 

@@ -1,0 +1,18 @@
+﻿using AccountOpening.Models;
+using AccountOpeningWithPND.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace AccountOpening.Entities
+{
+    public interface IAccountOpeningRepository
+    {
+        Task<Response> OpenAccount(AccountOpeningRequest request);
+        AccountOpeningRequest GetAccountOpeningRequest(Request r);
+        bool isDuplicateID(string idString);
+        string EncData(string value);
+        Task<FreezeResponse> FreezeAccount(FreezeRequest request);
+    }
+}
