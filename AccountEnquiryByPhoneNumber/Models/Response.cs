@@ -11,6 +11,7 @@ namespace AccountEnquiry.Models
         public string codAccountNumber { get; set; }
         public string codAccountTitle { get; set; }
         public string dateAccountOpen { get; set; }
+        public string accountStatus { get; set; }
         public string accountStatusDormant { get; set; }
         public decimal availableBalance { get; set; }
         public string phoneNumber { get; set; }

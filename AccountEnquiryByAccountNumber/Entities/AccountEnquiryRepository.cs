@@ -85,6 +85,7 @@ namespace AccountEnquiry.Entities
         {
             return new Models.Response()
             {
+                accountStatus = ar.record_stat,
                 accountStatusDormant = ar.ac_stat_dormant,
                 availableBalance = StringToDecimal(ar.bal_available),
                 codAccountNumber = ar.cod_acct_no,

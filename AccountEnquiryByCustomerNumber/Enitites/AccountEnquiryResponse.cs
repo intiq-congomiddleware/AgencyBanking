@@ -25,6 +25,7 @@ namespace AccountEnquiry.Entities
         public string ac_stat_de_post { get; set; }
         public string accountdesc { get; set; }
         public string branch { get; set; }
+        public string record_stat { get; set; }
         public string bal_available { get; set; }
         public string date_of_birth { get; set; }
         public string customer_phonenumber { get; set; }

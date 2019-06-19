@@ -31,3 +31,4 @@ C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AccountEnquiryByC
 C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AccountEnquiryByCustomerNumber\obj\Debug\netcoreapp2.1\AccountEnquiryByCustomerNumber.csproj.CopyComplete
 C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AccountEnquiryByCustomerNumber\obj\Debug\netcoreapp2.1\AccountEnquiryByCustomerNumber.dll
 C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AccountEnquiryByCustomerNumber\obj\Debug\netcoreapp2.1\AccountEnquiryByCustomerNumber.pdb
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AccountEnquiryByCustomerNumber\obj\Debug\netcoreapp2.1\AccountEnquiryByCustomerNumber.csprojAssemblyReference.cache
