@@ -31,3 +31,4 @@ C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\BalanceEnquiry\ob
 C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\BalanceEnquiry\obj\Debug\netcoreapp2.1\BalanceEnquiry.csproj.CopyComplete
 C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\BalanceEnquiry\obj\Debug\netcoreapp2.1\BalanceEnquiry.dll
 C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\BalanceEnquiry\obj\Debug\netcoreapp2.1\BalanceEnquiry.pdb
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\BalanceEnquiry\obj\Debug\netcoreapp2.1\BalanceEnquiry.csprojAssemblyReference.cache

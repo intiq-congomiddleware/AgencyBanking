@@ -1,0 +1,17 @@
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\FundsTransferInterBank\obj\Debug\netcoreapp2.1\FundsTransferInterBank.csprojAssemblyReference.cache
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\FundsTransferInterBank\obj\Debug\netcoreapp2.1\FundsTransferInterBank.csproj.CoreCompileInputs.cache
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\FundsTransferInterBank\obj\Debug\netcoreapp2.1\FundsTransferInterBank.RazorAssemblyInfo.cache
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\FundsTransferInterBank\obj\Debug\netcoreapp2.1\FundsTransferInterBank.RazorAssemblyInfo.cs
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\FundsTransferInterBank\obj\Debug\netcoreapp2.1\FundsTransferInterBank.AssemblyInfoInputs.cache
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\FundsTransferInterBank\obj\Debug\netcoreapp2.1\FundsTransferInterBank.AssemblyInfo.cs
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\FundsTransferInterBank\bin\Debug\netcoreapp2.1\FundsTransferInterBank.deps.json
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\FundsTransferInterBank\bin\Debug\netcoreapp2.1\FundsTransferInterBank.runtimeconfig.json
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\FundsTransferInterBank\bin\Debug\netcoreapp2.1\FundsTransferInterBank.runtimeconfig.dev.json
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\FundsTransferInterBank\bin\Debug\netcoreapp2.1\FundsTransferInterBank.dll
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\FundsTransferInterBank\bin\Debug\netcoreapp2.1\FundsTransferInterBank.pdb
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\FundsTransferInterBank\bin\Debug\netcoreapp2.1\AgencyBanking.dll
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\FundsTransferInterBank\bin\Debug\netcoreapp2.1\AgencyBanking.pdb
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\FundsTransferInterBank\obj\Debug\netcoreapp2.1\FundsTransferInterBank.RazorTargetAssemblyInfo.cache
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\FundsTransferInterBank\obj\Debug\netcoreapp2.1\FundsTransferInterBank.csproj.CopyComplete
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\FundsTransferInterBank\obj\Debug\netcoreapp2.1\FundsTransferInterBank.dll
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\FundsTransferInterBank\obj\Debug\netcoreapp2.1\FundsTransferInterBank.pdb

@@ -1,0 +1,16 @@
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\CashWithdrawalMultiChrgs\bin\Debug\netcoreapp2.1\CashWithdrawalMultiChrgs.deps.json
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\CashWithdrawalMultiChrgs\bin\Debug\netcoreapp2.1\CashWithdrawalMultiChrgs.runtimeconfig.json
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\CashWithdrawalMultiChrgs\bin\Debug\netcoreapp2.1\CashWithdrawalMultiChrgs.runtimeconfig.dev.json
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\CashWithdrawalMultiChrgs\bin\Debug\netcoreapp2.1\CashWithdrawalMultiChrgs.dll
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\CashWithdrawalMultiChrgs\bin\Debug\netcoreapp2.1\CashWithdrawalMultiChrgs.pdb
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\CashWithdrawalMultiChrgs\bin\Debug\netcoreapp2.1\AgencyBanking.dll
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\CashWithdrawalMultiChrgs\bin\Debug\netcoreapp2.1\AgencyBanking.pdb
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\CashWithdrawalMultiChrgs\obj\Debug\netcoreapp2.1\CashWithdrawalMultiChrgs.csproj.CoreCompileInputs.cache
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\CashWithdrawalMultiChrgs\obj\Debug\netcoreapp2.1\CashWithdrawalMultiChrgs.RazorAssemblyInfo.cache
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\CashWithdrawalMultiChrgs\obj\Debug\netcoreapp2.1\CashWithdrawalMultiChrgs.RazorAssemblyInfo.cs
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\CashWithdrawalMultiChrgs\obj\Debug\netcoreapp2.1\CashWithdrawalMultiChrgs.AssemblyInfoInputs.cache
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\CashWithdrawalMultiChrgs\obj\Debug\netcoreapp2.1\CashWithdrawalMultiChrgs.AssemblyInfo.cs
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\CashWithdrawalMultiChrgs\obj\Debug\netcoreapp2.1\CashWithdrawalMultiChrgs.RazorTargetAssemblyInfo.cache
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\CashWithdrawalMultiChrgs\obj\Debug\netcoreapp2.1\CashWithdrawalMultiChrgs.csproj.CopyComplete
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\CashWithdrawalMultiChrgs\obj\Debug\netcoreapp2.1\CashWithdrawalMultiChrgs.dll
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\CashWithdrawalMultiChrgs\obj\Debug\netcoreapp2.1\CashWithdrawalMultiChrgs.pdb
