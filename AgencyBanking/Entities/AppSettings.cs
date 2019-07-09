@@ -26,6 +26,7 @@ namespace AgencyBanking.Entities
         public string GLChrgAccount2 { get; set; }
         public string product { get; set; }
         public bool logAOToDB { get; set; }
+        public bool logABToDB { get; set; }
         public bool logFTToDB { get; set; }
         public string ConnectionString { get; set; }
         public string tableName { get; set; }

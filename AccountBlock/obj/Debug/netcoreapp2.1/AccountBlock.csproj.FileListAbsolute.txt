@@ -1,0 +1,17 @@
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AccountBlock\bin\Debug\netcoreapp2.1\AccountBlock.deps.json
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AccountBlock\bin\Debug\netcoreapp2.1\AccountBlock.runtimeconfig.json
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AccountBlock\bin\Debug\netcoreapp2.1\AccountBlock.runtimeconfig.dev.json
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AccountBlock\bin\Debug\netcoreapp2.1\AccountBlock.dll
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AccountBlock\bin\Debug\netcoreapp2.1\AccountBlock.pdb
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AccountBlock\bin\Debug\netcoreapp2.1\AgencyBanking.dll
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AccountBlock\bin\Debug\netcoreapp2.1\AgencyBanking.pdb
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AccountBlock\obj\Debug\netcoreapp2.1\AccountBlock.csprojAssemblyReference.cache
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AccountBlock\obj\Debug\netcoreapp2.1\AccountBlock.csproj.CoreCompileInputs.cache
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AccountBlock\obj\Debug\netcoreapp2.1\AccountBlock.RazorAssemblyInfo.cache
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AccountBlock\obj\Debug\netcoreapp2.1\AccountBlock.RazorAssemblyInfo.cs
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AccountBlock\obj\Debug\netcoreapp2.1\AccountBlock.AssemblyInfoInputs.cache
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AccountBlock\obj\Debug\netcoreapp2.1\AccountBlock.AssemblyInfo.cs
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AccountBlock\obj\Debug\netcoreapp2.1\AccountBlock.RazorTargetAssemblyInfo.cache
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AccountBlock\obj\Debug\netcoreapp2.1\AccountBlock.csproj.CopyComplete
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AccountBlock\obj\Debug\netcoreapp2.1\AccountBlock.dll
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AccountBlock\obj\Debug\netcoreapp2.1\AccountBlock.pdb

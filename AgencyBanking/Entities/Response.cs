@@ -20,4 +20,9 @@ namespace AgencyBanking.Entities
         public bool status { get; set; }
         public Dictionary<string, string> message { get; set; }
     }
+    public class Response3
+    {
+        public string status { get; set; }
+        public string message { get; set; }
+    }
 }

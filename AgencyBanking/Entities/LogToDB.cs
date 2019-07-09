@@ -94,6 +94,42 @@ namespace AgencyBanking.Entities
             }
 
             return (r > 0);
-        }      
+        }
+
+        public async Task<bool> AccountBlockDump(string request, string response)
+        {
+            ABRequest req = new ABRequest();
+            Response3 res = new Response3();
+
+            try { req = JsonHelper.fromJson<ABRequest>(request); } catch (Exception) { }
+
+            try { res = JsonHelper.fromJson<Response3>(response); } catch (Exception) { }
+
+            LogAccountBlock a = new LogAccountBlock()
+            {
+                accountNumber = req.accountNumber,
+                message = res.message,
+                reason = req.reason,
+                status = res.status,
+                userName = req.userName,
+                request = request,
+                requestId = req.requestId,
+                response = response
+            };
+
+            int r = 0;
+            var oralConnect = new OracleConnection(_protector.Unprotect(_appSettings.ConnectionString));
+            using (oralConnect)
+            {
+                string queryAccount = $@"INSERT INTO ACCOUNTBLOCK (requestId, accountNumber, message, status, userName, request, response)
+                                            VALUES (:requestId, :accountNumber, :message, :status, :userName, :request, :response)";
+
+                oralConnect.Open();
+
+                r = await oralConnect.ExecuteAsync(queryAccount, a);
+            }
+
+            return (r > 0);
+        }
     }
 }

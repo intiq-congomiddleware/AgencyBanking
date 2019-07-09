@@ -37,7 +37,7 @@ namespace CashWithdrawal.Entities
             //request.cract1 = _settings.GLAccount;
             request.cract2 = _settings.GLChrgAccount;
             request.trnamt1 = getCharges(request);
-            request.trnamt = getPrincipal(request.trnamt, request.trnamt1);
+            //request.trnamt = getPrincipal(request.trnamt, request.trnamt1);
             request.with_charges = true;
 
             try

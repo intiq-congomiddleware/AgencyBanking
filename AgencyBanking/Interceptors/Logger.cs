@@ -106,6 +106,18 @@ namespace AgencyBanking.Interceptors
 
                         }
 
+                        if (_settings.Value.logABToDB)
+                        {
+                            try
+                            {
+                                await _logToDB.AccountBlockDump(requestText, responseText);
+                            }
+                            catch (Exception ex)
+                            {
+                                _logger.LogError($"_logToDB.AccountBlockDump:- {ex.ToString()}");
+                            }
+                        }
+
                         reqId = (!string.IsNullOrEmpty(reqId)) ? reqId : DateTime.Now.ToString(Constant.TIMESTAMP_FORMAT_2);
 
                         _logger.LogInformation($"{reqId}:-" + "{@LogValues}", logValues);

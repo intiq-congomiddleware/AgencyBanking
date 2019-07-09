@@ -17,7 +17,6 @@ C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AgencyBanking\bin
 C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AgencyBanking\bin\Debug\netcoreapp2.1\AgencyBanking.runtimeconfig.dev.json
 C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AgencyBanking\bin\Debug\netcoreapp2.1\AgencyBanking.dll
 C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AgencyBanking\bin\Debug\netcoreapp2.1\AgencyBanking.pdb
-C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AgencyBanking\obj\Debug\netcoreapp2.1\AgencyBanking.csprojAssemblyReference.cache
 C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AgencyBanking\obj\Debug\netcoreapp2.1\AgencyBanking.csproj.CoreCompileInputs.cache
 C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AgencyBanking\obj\Debug\netcoreapp2.1\AgencyBanking.RazorAssemblyInfo.cache
 C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AgencyBanking\obj\Debug\netcoreapp2.1\AgencyBanking.RazorAssemblyInfo.cs
@@ -26,3 +25,4 @@ C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AgencyBanking\obj
 C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AgencyBanking\obj\Debug\netcoreapp2.1\AgencyBanking.RazorTargetAssemblyInfo.cache
 C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AgencyBanking\obj\Debug\netcoreapp2.1\AgencyBanking.dll
 C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AgencyBanking\obj\Debug\netcoreapp2.1\AgencyBanking.pdb
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AgencyBanking\obj\Debug\netcoreapp2.1\AgencyBanking.csprojAssemblyReference.cache

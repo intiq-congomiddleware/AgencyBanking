@@ -39,8 +39,8 @@ namespace CashWithdrawal.Entities
             var charges = getCharges(request);
             request.trnamt1 = charges.Item1;
             request.trnamt2 = charges.Item2;
-            decimal sumCharges = request.trnamt1 + request.trnamt2;
-            request.trnamt = getPrincipal(request.trnamt, sumCharges);
+            //decimal sumCharges = request.trnamt1 + request.trnamt2;
+            //request.trnamt = getPrincipal(request.trnamt, sumCharges);
             request.with_charges = true;
 
             try
