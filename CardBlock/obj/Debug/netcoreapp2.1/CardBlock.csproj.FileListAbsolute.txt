@@ -1,0 +1,17 @@
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\CardBlock\bin\Debug\netcoreapp2.1\CardBlock.deps.json
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\CardBlock\bin\Debug\netcoreapp2.1\CardBlock.runtimeconfig.json
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\CardBlock\bin\Debug\netcoreapp2.1\CardBlock.runtimeconfig.dev.json
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\CardBlock\bin\Debug\netcoreapp2.1\CardBlock.dll
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\CardBlock\bin\Debug\netcoreapp2.1\CardBlock.pdb
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\CardBlock\bin\Debug\netcoreapp2.1\AgencyBanking.dll
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\CardBlock\bin\Debug\netcoreapp2.1\AgencyBanking.pdb
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\CardBlock\obj\Debug\netcoreapp2.1\CardBlock.csprojAssemblyReference.cache
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\CardBlock\obj\Debug\netcoreapp2.1\CardBlock.csproj.CoreCompileInputs.cache
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\CardBlock\obj\Debug\netcoreapp2.1\CardBlock.RazorAssemblyInfo.cache
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\CardBlock\obj\Debug\netcoreapp2.1\CardBlock.RazorAssemblyInfo.cs
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\CardBlock\obj\Debug\netcoreapp2.1\CardBlock.AssemblyInfoInputs.cache
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\CardBlock\obj\Debug\netcoreapp2.1\CardBlock.AssemblyInfo.cs
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\CardBlock\obj\Debug\netcoreapp2.1\CardBlock.RazorTargetAssemblyInfo.cache
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\CardBlock\obj\Debug\netcoreapp2.1\CardBlock.csproj.CopyComplete
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\CardBlock\obj\Debug\netcoreapp2.1\CardBlock.dll
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\CardBlock\obj\Debug\netcoreapp2.1\CardBlock.pdb

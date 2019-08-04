@@ -25,4 +25,3 @@ C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AgencyBanking\obj
 C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AgencyBanking\obj\Debug\netcoreapp2.1\AgencyBanking.RazorTargetAssemblyInfo.cache
 C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AgencyBanking\obj\Debug\netcoreapp2.1\AgencyBanking.dll
 C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AgencyBanking\obj\Debug\netcoreapp2.1\AgencyBanking.pdb
-C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\AgencyBanking\obj\Debug\netcoreapp2.1\AgencyBanking.csprojAssemblyReference.cache

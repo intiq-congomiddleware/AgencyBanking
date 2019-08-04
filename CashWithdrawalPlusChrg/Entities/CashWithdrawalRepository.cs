@@ -90,7 +90,7 @@ namespace CashWithdrawal.Entities
 
         public decimal getCharges(CashWithdrawalRequest request)
         {
-            decimal d = request.prate / 100m;
+            decimal d = request.prate1 / 100m;
             decimal chrg = request.trnamt * d;
 
             return Math.Round(chrg, 2);
@@ -116,7 +116,7 @@ namespace CashWithdrawal.Entities
                 dract = r.debitAccount,
                 trnamt = r.amount,
                 txnnarra = r.narration,
-                prate = r.chargeRate,
+                prate1 = r.chargeRate,
                 branch_code = r.branchCode,
                 instr_code = "0",
                 product = _settings.product,
