@@ -1,0 +1,17 @@
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\CurrencyRates\bin\Debug\netcoreapp2.1\CurrencyRates.deps.json
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\CurrencyRates\bin\Debug\netcoreapp2.1\CurrencyRates.runtimeconfig.json
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\CurrencyRates\bin\Debug\netcoreapp2.1\CurrencyRates.runtimeconfig.dev.json
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\CurrencyRates\bin\Debug\netcoreapp2.1\CurrencyRates.dll
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\CurrencyRates\bin\Debug\netcoreapp2.1\CurrencyRates.pdb
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\CurrencyRates\bin\Debug\netcoreapp2.1\AgencyBanking.dll
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\CurrencyRates\bin\Debug\netcoreapp2.1\AgencyBanking.pdb
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\CurrencyRates\obj\Debug\netcoreapp2.1\CurrencyRates.csprojAssemblyReference.cache
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\CurrencyRates\obj\Debug\netcoreapp2.1\CurrencyRates.csproj.CoreCompileInputs.cache
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\CurrencyRates\obj\Debug\netcoreapp2.1\CurrencyRates.RazorAssemblyInfo.cache
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\CurrencyRates\obj\Debug\netcoreapp2.1\CurrencyRates.RazorAssemblyInfo.cs
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\CurrencyRates\obj\Debug\netcoreapp2.1\CurrencyRates.AssemblyInfoInputs.cache
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\CurrencyRates\obj\Debug\netcoreapp2.1\CurrencyRates.AssemblyInfo.cs
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\CurrencyRates\obj\Debug\netcoreapp2.1\CurrencyRates.RazorTargetAssemblyInfo.cache
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\CurrencyRates\obj\Debug\netcoreapp2.1\CurrencyRates.csproj.CopyComplete
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\CurrencyRates\obj\Debug\netcoreapp2.1\CurrencyRates.dll
+C:\Users\Donald\Documents\Access\CongoMiddleware\AgencyBanking\CurrencyRates\obj\Debug\netcoreapp2.1\CurrencyRates.pdb

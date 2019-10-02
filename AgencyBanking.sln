@@ -39,7 +39,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CashWithdrawalMultiChrgs", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AccountBlock", "AccountBlock\AccountBlock.csproj", "{A6AA0F50-E31E-4C38-90BB-49CE2588804C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardBlock", "CardBlock\CardBlock.csproj", "{59661859-770D-4D73-840F-8974F465AE54}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CardBlock", "CardBlock\CardBlock.csproj", "{59661859-770D-4D73-840F-8974F465AE54}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CurrencyRates", "CurrencyRates\CurrencyRates.csproj", "{8EB6406D-70C8-44CA-84BC-1EF5D82C8C87}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -123,6 +125,10 @@ Global
 		{59661859-770D-4D73-840F-8974F465AE54}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{59661859-770D-4D73-840F-8974F465AE54}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{59661859-770D-4D73-840F-8974F465AE54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8EB6406D-70C8-44CA-84BC-1EF5D82C8C87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EB6406D-70C8-44CA-84BC-1EF5D82C8C87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EB6406D-70C8-44CA-84BC-1EF5D82C8C87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EB6406D-70C8-44CA-84BC-1EF5D82C8C87}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
